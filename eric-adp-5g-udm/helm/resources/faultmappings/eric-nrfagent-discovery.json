@@ -1,0 +1,14 @@
+[
+  {
+     "faultName": "nfDiscoveryAgentNoAvailableDestination",
+     "createAlarm": {{ .Values.global.alarms.nfDiscoveryAgentNoAvailableDestination.enabled }},
+     "defaultDescription": "NRFAgent eric-nrfagent-discovery No Available Destination",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 8060931,
+     "specificProblem": "NRFAgent eric-nrfagent-discovery No Available Destination",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "faultName": "ausfAuthUdmConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "AUSF nausf-auth Failed to Connect to UDM nudm-ueau Service",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7995393,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "AUSF nausf-auth Failed to Connect to UDM nudm-ueau Service"
+    },
+    {
+        "faultName": "ausfAuthServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "AUSF nausf-auth Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7995394,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "AUSF nausf-auth Service Overloaded"
+    },
+    {
+        "faultName": "ausfOauth2ProducerAuthenticationError",
+        "createAlarm": true,
+        "defaultDescription": "AUSF SBI OAuth Authorization Failure Ratio Exceeded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7995395,
+        "category": "CommunicationsAlarm",
+        "probableCause": 1614,
+        "specificProblem": "AUSF SBI OAuth Authorization Failure Ratio Exceeded"
+    }
+]

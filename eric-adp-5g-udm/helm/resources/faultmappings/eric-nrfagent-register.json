@@ -1,0 +1,26 @@
+[
+  {
+     "faultName": "nfRegisterAgentNrfConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRFAgent eric-nrfagent-register Failed to Connect to NRF",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Critical",
+     "vendor": 193,
+     "code": 8060929,
+     "specificProblem": "NRFAgent eric-nrfagent-register Failed to Connect to NRF",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nfRegisterAgentRegistrationFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRFAgent eric-nrfagent-register Failed to Register NF in NRF",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 8060934,
+     "specificProblem": "NRFAgent eric-nrfagent-register Failed to Register NF in NRF",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  }
+]

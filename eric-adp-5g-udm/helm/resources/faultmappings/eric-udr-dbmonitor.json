@@ -1,0 +1,110 @@
+[
+  {
+    "faultName": "databaseReplicationDown",
+    "vendor": 193,
+    "code": 7733256,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 2419200,
+    "probableCause": 306,
+    "category": "CommunicationsAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Replication to Remote Site Down",
+    "createAlarm": true,
+    "defaultDescription": "Database replication to the remote site is down."
+  },
+  {
+    "faultName": "databaseReplicationDelay",
+    "vendor": 193,
+    "code": 7733257,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 351,
+    "category": "QualityOfServiceAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Replication to Remote Site Delayed",
+    "createAlarm": true,
+    "defaultDescription": "The delay of database replication to the remote site has crossed the threshold."
+  },
+  {
+    "faultName": "databaseHighLoad",
+    "vendor": 193,
+    "code": 7733258,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 207,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Load High",
+    "createAlarm": true,
+    "defaultDescription": "Database high load has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseMemoryUsage",
+    "vendor": 193,
+    "code": 7733253,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 162,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Memory Usage High",
+    "createAlarm": true,
+    "defaultDescription": "Database memory usage has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseDiskUsage",
+    "vendor": 193,
+    "code": 7733254,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 151,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Disk Usage High",
+    "createAlarm": true,
+    "defaultDescription": "Database disk usage has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseServerMemoryUsage",
+    "vendor": 193,
+    "code": 7733272,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 162,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Server Memory Usage High",
+    "createAlarm": true,
+    "defaultDescription": "Database server memory usage has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseServerHighLoad",
+    "vendor": 193,
+    "code": 7733273,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 207,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Server Load High",
+    "createAlarm": true,
+    "defaultDescription": "Database server high load has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseServerDiskUsage",
+    "vendor": 193,
+    "code": 7733274,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 151,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor Database Server Disk Usage High",
+    "createAlarm": true,
+    "defaultDescription": "Database server disk usage has exceeded the configured threshold."
+  },
+  {
+    "faultName": "databaseServerOffHeapFragmentation",
+    "vendor": 193,
+    "code": 7733275,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 152,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-dbmonitor DB Server Off-Heap Fragmentation High",
+    "createAlarm": true,
+    "defaultDescription": "Database server offHeap fragmentation has exceeded the configured threshold."
+  }
+]

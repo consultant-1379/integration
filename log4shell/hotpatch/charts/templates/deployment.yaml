@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "eric-log4shell-patch.name" . }}
+  labels:
+    app: {{ include "eric-log4shell-patch.name" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "eric-log4shell-patch.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "eric-log4shell-patch.name" . }}
+    spec:
+      initContainers:
+        - name: patch-volumes
+          image: "{{ template "eric-log4shell-patch.registryUrl" . }}/{{ .Values.imageCredentials.repoPath }}/{{ .Values.images.patchVolume.name }}:{{ .Values.images.patchVolume.tag }}"
+          imagePullPolicy: {{ default .Values.global.imageCredentials.pullPolicy .Values.imageCredentials.pullPolicy }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - all
+            privileged: false
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+          volumeMounts:
+            - name: vulnerable-micros-volume
+              mountPath: /config
+      containers:
+        - name: apply-hotpatch
+          image: "{{ template "eric-log4shell-patch.registryUrl" . }}/{{ .Values.imageCredentials.repoPath }}/{{ .Values.images.applyPatch.name }}:{{ .Values.images.applyPatch.tag }}"
+          imagePullPolicy: {{ default .Values.global.imageCredentials.pullPolicy .Values.imageCredentials.pullPolicy }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - all
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          volumeMounts:
+            - name: vulnerable-micros-volume
+              mountPath: /config
+      serviceAccountName: {{ include "eric-log4shell-patch.name" . }}
+      volumes:
+      - name: vulnerable-micros-volume
+        configMap:
+          name: {{ include "eric-log4shell-patch.name" . }}

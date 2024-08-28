@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "ccsmSmsorchServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "CCSM Smsorch Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993095,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "CCSM Smsorch Service Overloaded"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "faultName": "eirNcudrGudUdrConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "EIR Fail to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 12910593,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "EIR Fail to Connect to UDR"
+    },
+    {
+        "faultName": "eirNcudrGudUdrInstanceUnavailable",
+        "createAlarm": true,
+        "defaultDescription": "UDR Instance Unavailable for EIR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 12910594,
+        "category": "CommunicationsAlarm",
+        "probableCause": 23,
+        "specificProblem": "UDR Instance Unavailable for EIR"
+    }
+]

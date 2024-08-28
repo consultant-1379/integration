@@ -1,0 +1,74 @@
+[
+  {
+    "faultName": "siteDown",
+    "vendor": 193,
+    "code": 7733251,
+    "defaultSeverity": "Critical",
+    "defaultExpiration": 2419200,
+    "probableCause": 302,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-system-monitor Site Down",
+    "createAlarm": true,
+    "defaultDescription": "The reporting UDR Site is not able to provide traffic services."
+  },
+  {
+    "faultName": "remoteSiteUnreachable",
+    "vendor": 193,
+    "code": 7733252,
+    "defaultSeverity": "Critical",
+    "defaultExpiration": 2419200,
+    "probableCause": 22,
+    "category": "CommunicationsAlarm",
+    "specificProblem": "UDR eric-udr-system-monitor Remote Site Unreachable",
+    "createAlarm": true,
+    "defaultDescription": "The reporting UDR Site is not able to connect to remote UDR site."
+  },
+  {
+    "faultName": "automaticRecoveryStopped",
+    "vendor": 193,
+    "code": 7733276,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 0,
+    "category": "Other",
+    "specificProblem": "UDR eric-udr-system-monitor Automatic recovery stopped",
+    "createAlarm": true,
+    "defaultDescription": "Automatic recovery procedure is stopped."
+  },
+  {
+    "faultName": "siteVisibilityOverridden",
+    "vendor": 193,
+    "code": 7733278,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 1024,
+    "category": "Other",
+    "specificProblem": "UDR eric-udr-system-monitor Site visibility overridden",
+    "createAlarm": true,
+    "defaultDescription": "List of remote instances that are considered as operational has changed."
+  },
+  {
+    "faultName": "adminStateLocked",
+    "vendor": 193,
+    "code": 7733279,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 1024,
+    "category": "Other",
+    "specificProblem": "UDR eric-udr-system-monitor Instance administratively locked",
+    "createAlarm": true,
+    "defaultDescription": "Value of administrative-state parameter is set to locked."
+  },
+  {
+    "faultName": "automaticRecoveryLocked",
+    "vendor": 193,
+    "code": 7733280,
+    "defaultSeverity": "Warning",
+    "defaultExpiration": 2419200,
+    "probableCause": 1024,
+    "category": "Other",
+    "specificProblem": "UDR eric-udr-system-monitor Automatic Recovery Admin Locked",
+    "createAlarm": true,
+    "defaultDescription": "Value of administrative-state parameter for automatic recovery is set to locked."
+  }
+]

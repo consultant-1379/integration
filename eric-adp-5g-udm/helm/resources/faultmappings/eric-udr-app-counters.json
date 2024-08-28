@@ -1,0 +1,26 @@
+[
+  {
+    "faultName": "applicationCounterError",
+    "vendor": 193,
+    "code": 7733260,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 159,
+    "category": "ProcessingErrorAlarm",
+    "specificProblem": "UDR eric-udr-app-counters Calculation of counters failed",
+    "createAlarm": true,
+    "defaultDescription": "Calculation of counters failed"
+  },
+  {
+    "faultName": "applicationCounterDisabled",
+    "vendor": 193,
+    "code": 7733270,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 302,
+    "category": "Other",
+    "specificProblem": "UDR eric-udr-app-counters Counter Calculation Disabled",
+    "createAlarm": true,
+    "defaultDescription": "Calculation of counters disabled because CCDM system is not in healthy state"
+  }
+]

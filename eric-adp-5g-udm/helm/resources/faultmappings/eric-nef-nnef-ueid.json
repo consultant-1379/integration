@@ -1,0 +1,74 @@
+[
+    {
+        "faultName": "nefScpConnectionFailure",
+        "vendor": 193,
+        "code": 8591360,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-ueid Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefBsfConnectionFailure",
+        "vendor": 193,
+        "code": 8591361,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-ueid Failed to Connect to BSF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid failed to connect to BSF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefUdmConnectionFailure",
+        "vendor": 193,
+        "code": 8591362,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-ueid Failed to Connect to UDM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid failed to connect to UDM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefUEIdServiceUnavailable",
+        "vendor": 193,
+        "code": 8591363,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-ueid Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefUEIdServiceOverload",
+        "vendor": 193,
+        "code": 8591364,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-ueid Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid service is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLhConnectionFailure",
+        "vendor": 193,
+        "code": 8591365,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-ueid Failed to Connect to LH",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-ueid failed to connect to LH",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    }
+]

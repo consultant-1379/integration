@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "ngacDbConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "NGAC eric-ngac-apiservice-mgmt failed to connect to DB",
+        "defaultExpiration": 600,
+        "specificProblem": "NGAC eric-ngac-apiservice-mgmt Failed to Connect to DB",
+        "defaultSeverity": "Major",
+        "category": "CommunicationsAlarm",
+        "vendor": 193,
+        "code": 18415872,
+        "probableCause": 22
+    }
+]

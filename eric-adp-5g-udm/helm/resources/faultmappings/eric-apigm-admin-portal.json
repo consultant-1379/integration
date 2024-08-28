@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "adminPortalLmConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "APIGM Admin Portal failed to connect to LM",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-admin-portal Failed to Connect to LM",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 9242624,
+    "probableCause": 22
+  }
+]

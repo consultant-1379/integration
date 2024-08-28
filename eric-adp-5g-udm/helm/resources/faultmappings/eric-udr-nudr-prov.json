@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "udrProvisioningServiceOverloaded",
+    "vendor": 193,
+    "code": 7733263,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 207,
+    "category": "QualityOfServiceAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-nudr-prov Service Overloaded",
+    "defaultDescription": "Overload detected for Nudr Prov interface."
+  }
+]

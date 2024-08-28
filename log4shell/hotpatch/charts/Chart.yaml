@@ -1,0 +1,4 @@
+apiVersion: v2
+description: patch for log4shell vulnerability
+name: eric-log4shell-hotpatch
+version: "1.0.0"

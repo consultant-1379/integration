@@ -1,0 +1,38 @@
+[
+    {
+        "faultName": "udmSdmNotificationConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-sdm Fail to send notification of data_changes due to NF is unreachable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798785,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-sdm Fail to Connect to remote endpoint"
+    },
+    {
+        "faultName": "udmSdmUdrConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-sdm Fail to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798787,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-sdm Fail to Connect to UDR"
+    },
+    {
+        "faultName": "udmSdmServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-sdm Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798789,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-sdm Service Overloaded"
+    }
+]

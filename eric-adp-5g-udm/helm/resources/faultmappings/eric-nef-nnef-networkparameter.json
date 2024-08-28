@@ -1,0 +1,62 @@
+[
+  {
+    "code": 8588032,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "nefDbConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultDescription": "NEF eric-nef-nnef-networkparameter failed to connect to DB",
+    "specificProblem": "NEF eric-nef-nnef-networkparameter Failed to Connect to DB",
+    "defaultExpiration": 600,
+    "createAlarm": true
+  },
+  {
+    "code": 8588033,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "nefAfConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultDescription": "NEF eric-nef-nnef-networkparameter failed to connect to AF",
+    "specificProblem": "NEF eric-nef-nnef-networkparameter Failed to Connect to AF",
+    "defaultExpiration": 600,
+    "createAlarm": true
+  },
+  {
+    "code": 8588034,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "nefLhConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultDescription": "NEF eric-nef-nnef-networkparameter failed to connect to LH",
+    "specificProblem": "NEF eric-nef-nnef-networkparameter Failed to Connect to LH",
+    "defaultExpiration": 600,
+    "createAlarm": true
+  },
+  {
+    "code": 8588035,
+    "createAlarm": true,
+    "faultName": "nefNetworkParameterServiceOverload",
+    "defaultDescription": "NEF eric-nef-nnef-networkparameter is overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "NEF eric-nef-nnef-networkparameter Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "probableCause": 207
+  },
+  {
+    "code": 8588036,
+    "createAlarm": true,
+    "faultName": "nefNetworkParameterServiceUnavailable",
+    "defaultDescription": "NEF eric-nef-nnef-networkparameter service is unavailable",
+    "defaultExpiration": 600,
+    "specificProblem": "NEF eric-nef-nnef-networkparameter Service Unavailable",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "probableCause": 158
+  }
+]

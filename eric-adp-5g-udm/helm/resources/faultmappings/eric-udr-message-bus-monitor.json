@@ -1,0 +1,14 @@
+[
+ {
+    "faultName": "messageBusDegraded",
+    "vendor": 193,
+    "code": 7733259,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 2419200,
+    "probableCause": 352,
+    "category": "QualityOfServiceAlarm",
+    "specificProblem": "UDR eric-udr-message-bus-monitor Message Bus Degraded",
+    "createAlarm": true,
+    "defaultDescription": "Message Bus degradation has been detected."
+  }
+]

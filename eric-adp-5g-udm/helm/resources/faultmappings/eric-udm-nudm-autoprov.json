@@ -1,0 +1,26 @@
+[
+    {
+        "faultName": "udmAutoprovEdaConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-autoprov Fail to Connect to EDA",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798814,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-autoprov Fail to connect to EDA"
+    },
+    {
+        "faultName": "udmAutoprovConfigurationError",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-autoprov Configuration Error",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798815,
+        "category": "OperationalViolation",
+        "probableCause": 100506,
+        "specificProblem": "UDM nudm-autoprov Configuration Error"
+    }
+]

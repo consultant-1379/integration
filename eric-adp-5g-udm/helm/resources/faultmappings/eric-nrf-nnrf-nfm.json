@@ -1,0 +1,110 @@
+[
+  {
+     "faultName": "nrfMngtNrfConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management Service Failed to Connect to Another NRF",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Critical",
+     "vendor": 193,
+     "code": 7929857,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Failed to Connect to Another NRF",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtServiceOverloaded",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management service is overloaded",
+     "defaultExpiration": 60,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 7929858,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Service Overloaded",
+     "probableCause": 207,
+     "category": "QualityOfServiceAlarm"
+  },
+  {
+     "faultName": "nrfDataReplicationConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management service Data Replication Connection to Peer NRF is Broken",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 7929859,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Failed to Connect to Replication NRF",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtDatabaseConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management Service Failed to Connect to Database",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Critical",
+     "vendor": 193,
+     "code": 7929860,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Failed to Connect to Database",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtNrfRegistrationFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management Service Failed to Register to Another NRF",
+     "defaultExpiration": 60,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 7929861,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Failed to Register to Another NRF",
+     "probableCause": 100504,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtSeppConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management Service Failed to Connect to SEPP",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Critical",
+     "vendor": 193,
+     "code": 7929863,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Failed to Connect to SEPP",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtNFSuspended",
+     "createAlarm": true,
+     "defaultDescription": "NRF Management Service NF Status is Suspended",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Minor",
+     "vendor": 193,
+     "code": 7929864,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm Registered NF Status is Suspended",
+     "probableCause": 164,
+     "category": "CommunicationsAlarm"
+  },
+  {
+     "faultName": "nrfMngtLicenseAbsent",
+     "createAlarm": true,
+     "defaultDescription": "License is Absent for The Configured SNSSAI",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 7929865,
+     "specificProblem": "NRF eric-nrf-nnrf-nfm License Absent",
+     "probableCause": 418,
+     "category": "QualityOfServiceAlarm"
+  },
+  {
+    "faultName": "ccrcNrfAdministrativeStateLocked",
+    "createAlarm": true,
+    "defaultDescription": "CCRC Administrative State Manually Locking for NRF",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 7929866,
+    "probableCause": 418,
+    "specificProblem": "CCRC Administrative State Manually Locking for NRF"
+  }
+]

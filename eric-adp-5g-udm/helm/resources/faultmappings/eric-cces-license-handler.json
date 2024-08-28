@@ -1,0 +1,13 @@
+[
+  {
+    "code": 8590337,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "nefLmConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultDescription": "NEF eric-cces-license-handler failed to connect to LM",
+    "specificProblem": "NEF eric-cces-license-handler Failed to Connect to LM",
+    "createAlarm": true
+  }
+]

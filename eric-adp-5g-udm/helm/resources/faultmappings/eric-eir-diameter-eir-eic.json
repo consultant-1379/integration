@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "eirS13diameterServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "EIR S13 Diameter Services Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 12910597,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "EIR S13 Diameter Services Overloaded"
+    }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "code": 9242112,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "oauthSmsfServiceConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultExpiration": 600,
+    "defaultDescription": "APIGM eric-apigm-oauthserver failed to connect to JwksManager",
+    "specificProblem": "APIGM eric-apigm-oauthserver Failed to Connect to JwksManager",
+    "createAlarm": true
+  },
+  {
+    "code": 9242113,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "oauthClientServiceConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultExpiration": 600,
+    "defaultDescription": "APIGM eric-apigm-oauthserver failed to connect to CommonEntity",
+    "specificProblem": "APIGM eric-apigm-oauthserver Failed to Connect to CommonEntity",
+    "createAlarm": true
+  },
+  {
+    "code": 9242114,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "oauthLmConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultExpiration": 600,
+    "defaultDescription": "APIGM eric-apigm-oauthserver failed to connect to LM",
+    "specificProblem": "APIGM eric-apigm-oauthserver Failed to Connect to LM",
+    "createAlarm": true
+  }
+]
+

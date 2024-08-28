@@ -1,0 +1,74 @@
+[
+    {
+        "faultName": "nefPcfConnectionFailure",
+        "vendor": 193,
+        "code": 8585472,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Failed to Connect to PCF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation failed to connect to PCF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8585473,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefBdtServiceOverload",
+        "vendor": 193,
+        "code": 8585474,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLmConnectionFailure",
+        "vendor": 193,
+        "code": 8585475,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Failed to Connect to LM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation failed to connect to LM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefBdtServiceUnavailable",
+        "vendor": 193,
+        "code": 8585476,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefScpConnectionFailure",
+        "vendor": 193,
+        "code": 8585477,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-bdtpnegotiation Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-bdtpnegotiation failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    }
+]

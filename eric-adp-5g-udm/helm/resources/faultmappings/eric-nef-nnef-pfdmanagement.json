@@ -1,0 +1,74 @@
+[
+  {
+    "faultName": "nefDbConnectionFailure",
+    "vendor": 193,
+    "code": 8587264,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Failed to Connect to DB",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement failed to connect to DB",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  },
+  {
+    "faultName": "nefPfdServiceUnavailable",
+    "vendor": 193,
+    "code": 8587265,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 158,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Service Unavailable",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement service is unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  },
+  {
+    "faultName": "nefLmConnectionFailure",
+    "vendor": 193,
+    "code": 8587266,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Failed to Connect to LM",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement failed to connect to LM",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  },
+  {
+    "faultName": "nefUdrConnectionFailure",
+    "vendor": 193,
+    "code": 8587267,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Failed to Connect to UDR",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement failed to connect to UDR",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  },
+  {
+    "faultName": "nefScpConnectionFailure",
+    "vendor": 193,
+    "code": 8587268,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Failed to Connect to SCP",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement failed to connect to SCP",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  },
+  {
+    "faultName": "nefSmfConnectionFailure",
+    "vendor": 193,
+    "code": 8587269,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-pfdmanagement Failed to Connect to SMF",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-pfdmanagement failed to connect to SMF",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  }
+]

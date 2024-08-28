@@ -1,0 +1,74 @@
+[
+    {
+        "faultName": "nefUdrConnectionFailure",
+        "vendor": 193,
+        "code": 8590592,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Service Failed to Connect to UDR",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence service failed to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8590593,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefAmiServiceOverload",
+        "vendor": 193,
+        "code": 8590594,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLhConnectionFailure",
+        "vendor": 193,
+        "code": 8590595,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Failed to Connect to LH",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence failed to connect to LH",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefAmiServiceUnavailable",
+        "vendor": 193,
+        "code": 8590596,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefScpConnectionFailure",
+        "vendor": 193,
+        "code": 8590597,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-aminfluence Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-aminfluence failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    }
+]

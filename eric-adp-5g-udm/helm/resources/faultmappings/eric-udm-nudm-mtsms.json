@@ -1,0 +1,26 @@
+[
+    {
+        "faultName": "udmMtsmsAmfConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-mtsms Fail to Connect to AMF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798809,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-mtsms Fail to Connect to AMF"
+    },
+    {
+        "faultName": "udmMtsmsServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-mtsms Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798812,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-mtsms Service Overloaded"
+    }
+]

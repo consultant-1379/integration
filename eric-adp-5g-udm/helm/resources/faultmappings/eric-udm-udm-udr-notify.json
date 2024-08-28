@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "udmUdrNotifyServiceOverload",
+        "createAlarm": true,
+        "defaultDescription": "UDM udm-udr-notify Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798817,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM udm-udr-notify Service Overloaded"
+    }
+]

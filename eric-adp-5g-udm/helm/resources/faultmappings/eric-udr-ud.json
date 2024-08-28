@@ -1,0 +1,38 @@
+[
+  {
+    "faultName": "soapNotificationsEndpointUnreachable",
+    "vendor": 193,
+    "code": 7733249,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 22,
+    "category": "CommunicationsAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-ud Soap Notifications Endpoint Unreachable",
+    "defaultDescription": "SOAP Notifications Endpoint is unreachable."
+  },
+  {
+    "faultName": "udServiceOverloaded",
+    "vendor": 193,
+    "code": 7733262,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 207,
+    "category": "QualityOfServiceAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-ud Service Overloaded",
+    "defaultDescription": "Overload detected for Ud interface."
+  },
+  {
+    "faultName": "proxyToCUDBConnectionFailed",
+    "vendor": 193,
+    "code": 7733271,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 2419200,
+    "probableCause": 22,
+    "category": "CommunicationsAlarm",
+    "createAlarm": true,
+    "specificProblem": "UDR eric-udr-ud Proxy Connection to CUDB is down",
+    "defaultDescription": "Connection failed. All endpoint instances unreachable"
+  }
+]

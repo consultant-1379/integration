@@ -1,0 +1,134 @@
+[
+  {
+    "faultName": "failedToConnectToUDR",
+    "vendor": 193,
+    "code": 13369345,
+    "specificProblem": "PF eric-act-mapi Failed to Connect to UDR",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultSeverity": "Major",
+    "defaultDescription": "Failed to connect to UDR.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "udrTimeoutResponseThresholdExceeded",
+    "vendor": 193,
+    "code": 13369346,
+    "specificProblem": "PF eric-act-mapi UDR Timeout Response Threshold Exceeded",
+    "category": "CommunicationsAlarm",
+    "probableCause": 164,
+    "defaultSeverity": "Major",
+    "defaultDescription": "UDR not responding.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "malformedRequestsThresholdExceeded",
+    "vendor": 193,
+    "code": 13369347,
+    "specificProblem": "PF eric-act-mapi Malformed Request Threshold Exceeded",
+    "category": "Other",
+    "probableCause": 23,
+    "defaultSeverity": "Warning",
+    "defaultDescription": "High number of malformed incoming MAPI requests.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "serviceDegraded",
+    "vendor": 193,
+    "code": 13369348,
+    "specificProblem": "PF eric-act-mapi Service is Degraded",
+    "category": "Other",
+    "probableCause": 100532,
+    "defaultSeverity": "Major",
+    "defaultDescription": "Service is degraded.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "expiringInternalCertificate",
+    "vendor": 193,
+    "code": 13369349,
+    "specificProblem": "PF eric-act-mapi certificate expiry",
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 351,
+    "defaultSeverity": "Warning",
+    "defaultDescription": "Certificate is about to expire within X days.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "failedToConnectToNUDR",
+    "vendor": 193,
+    "code": 13369350,
+    "specificProblem": "PF eric-act-mapi Failed to Connect to NUDR",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultSeverity": "Major",
+    "defaultDescription": "Failed to connect to NUDR.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "nudrTimeoutResponseThresholdExceeded",
+    "vendor": 193,
+    "code": 13369351,
+    "specificProblem": "PF eric-act-mapi NUDR Timeout Response Threshold Exceeded",
+    "category": "CommunicationsAlarm",
+    "probableCause": 164,
+    "defaultSeverity": "Major",
+    "defaultDescription": "NUDR not responding.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "kafkaStorageRatio",
+    "vendor": 193,
+    "code": 13369352,
+    "specificProblem": "PF eric-act-mb-kf Storage Usage Threshold Exceeded",
+    "category": "Other",
+    "probableCause": 151,
+    "defaultSeverity": "Major",
+    "defaultDescription": "Persistent volume usage ratio of Kafka is high which identifies a lack of space in the filesystem.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "kafkaMuteProcessingLogs",
+    "vendor": 193,
+    "code": 13369353,
+    "specificProblem": "PF eric-act-mb-kf Mute Processing Logs",
+    "category": "Other",
+    "probableCause": 151,
+    "defaultSeverity": "Critical",
+    "defaultDescription": "Persistent volume usage ratio of Kafka is higher than the peak storage usage threshold. Immediate action must be taken to prevent service outage.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "cassandraCompactionPeak",
+    "vendor": 193,
+    "code": 13369354,
+    "specificProblem": "PF eric-data-wide-column-database-cd Peak Disk Usage Exceeded",
+    "category": "Other",
+    "probableCause": 151,
+    "defaultSeverity": "Warning",
+    "defaultDescription": "Peak disk space usage ratio during compactions has exceeded the defined threshold.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "cassandraSlidingLowWaterMark",
+    "vendor": 193,
+    "code": 13369355,
+    "specificProblem": "PF eric-data-wide-column-database-cd Sliding Water Mark Reached",
+    "category": "Other",
+    "probableCause": 151,
+    "defaultSeverity": "Major",
+    "defaultDescription": "Disk space ratio occupied by application live data, excluding short-lived temporary allocations, grows higher than the sliding low water mark.",
+    "defaultExpiration": 30
+  },
+  {
+    "faultName": "cassandraMuteProcessingLogs",
+    "vendor": 193,
+    "code": 13369356,
+    "specificProblem": "PF eric-data-wide-column-database-cd Mute Processing Logs",
+    "category": "Other",
+    "probableCause": 151,
+    "defaultSeverity": "Critical",
+    "defaultDescription": "Disk space ratio occupied by application live data, excluding short-lived temporary allocations, grows much higher than the sliding low water mark. Immediate action must be taken to prevent service outage.",
+    "defaultExpiration": 30
+  }
+]

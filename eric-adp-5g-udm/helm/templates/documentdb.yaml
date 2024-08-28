@@ -1,0 +1,102 @@
+{{- if .Values.sharedDocumentDatabasePG.enabled -}}
+{{- if or ((.Values.global.documentDatabasePg).operator).enabled .Values.global.documentDatabasePG.operator.enabled -}}
+apiVersion: docdb.data.ericsson.com/v1beta1
+kind: DocumentDB
+# This is the ADP Custom Resource (CR) for creating a DDB-PG instance (Custom Object (CO)) to be shared among
+# one or more Service Consumers (SCs).
+metadata:
+  name: eric-data-document-database-pg
+spec:
+  {{- if .Values.sharedDocumentDatabasePG.logLevel }}
+  log:
+    level: {{ .Values.sharedDocumentDatabasePG.logLevel | lower }}
+  {{- end }}
+  {{- if .Values.sharedDocumentDatabasePG.instanceName }}
+  instanceName: {{ .Values.sharedDocumentDatabasePG.instanceName }}
+  {{- end }}
+  backupRestore: {{ toYaml (.Values.sharedDocumentDatabasePG.backupRestore) | nindent 4 }}
+{{- if .Values.resources }}
+  resources:
+    flavor: {{ default "default" .Values.resources.flavor | quote }}
+    {{- if .Values.resources.persistentVolumeClaimEnabled }}
+    {{- if ((.Values.resources).persistentStorage) }}
+    persistentStorage:
+      {{- if .Values.resources.persistentStorage.housekeepingThresholdPercentage }}
+      housekeepingThresholdPercentage: {{ .Values.resources.persistentStorage.housekeepingThresholdPercentage }}
+      {{- end }}
+      {{- if .Values.resources.persistentStorage.documentDatabasePGVolume }}
+      documentDatabasePGVolume:
+        {{- if not (hasKey .Values.resources.persistentStorage.documentDatabasePGVolume.persistentVolumeClaim "disable") }}
+        persistentVolumeClaim:
+          {{- if .Values.resources.persistentStorage.documentDatabasePGVolume.persistentVolumeClaim.size }}
+          size: {{ .Values.resources.persistentStorage.documentDatabasePGVolume.persistentVolumeClaim.size | quote }}
+          {{- end }}
+          {{- if .Values.resources.persistentStorage.documentDatabasePGVolume.persistentVolumeClaim.storageClassName }}
+          storageClassName: {{ .Values.resources.persistentStorage.documentDatabasePGVolume.persistentVolumeClaim.storageClassName | quote }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- if ((.Values.resources).flavorMultipliers) }}
+    flavorMultipliers:
+      {{- if .Values.resources.flavorMultipliers.limits }}
+      limits:
+      {{- if .Values.resources.flavorMultipliers.limits.cpuPercent }}
+        cpuPercent: {{ .Values.resources.flavorMultipliers.limits.cpuPercent }}
+      {{- end }}
+      {{- if .Values.resources.flavorMultipliers.limits.memoryPercent }}
+        memoryPercent: {{ .Values.resources.flavorMultipliers.limits.memoryPercent }}
+      {{- end }}
+      {{- if .Values.resources.flavorMultipliers.limits.ephemeralPercent }}
+        ephemeralPercent: {{ .Values.resources.flavorMultipliers.limits.ephemeralPercent }}
+      {{- end }}
+      {{- end }}
+      {{- if .Values.resources.flavorMultipliers.requests }}
+      requests:
+      {{- if .Values.resources.flavorMultipliers.requests.cpuPercent }}
+        cpuPercent: {{ .Values.resources.flavorMultipliers.requests.cpuPercent }}
+      {{- end }}
+      {{- if .Values.resources.flavorMultipliers.requests.memoryPercent }}
+        memoryPercent: {{ .Values.resources.flavorMultipliers.requests.memoryPercent }}
+      {{- end }}
+      {{- if .Values.resources.flavorMultipliers.requests.ephemeralPercent }}
+        ephemeralPercent: {{ .Values.resources.flavorMultipliers.requests.ephemeralPercent }}
+      {{- end }}
+      {{- end }}
+      {{- end }}
+    {{- if ((.Values.resources).backupRestoreFlavorMultipliers) }}
+    backupRestoreFlavorMultipliers:
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.limits }}
+      limits:
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.limits.cpuPercent }}
+        cpuPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.limits.cpuPercent }}
+      {{- end }}
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.limits.memoryPercent }}
+        memoryPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.limits.memoryPercent }}
+      {{- end }}
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.limits.ephemeralPercent }}
+        ephemeralPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.limits.ephemeralPercent }}
+      {{- end }}
+      {{- end }}
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.requests }}
+      requests:
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.requests.cpuPercent }}
+        cpuPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.requests.cpuPercent }}
+      {{- end }}
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.requests.memoryPercent }}
+        memoryPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.requests.memoryPercent }}
+      {{- end }}
+      {{- if .Values.resources.backupRestoreFlavorMultipliers.requests.ephemeralPercent }}
+        ephemeralPercent: {{ .Values.resources.backupRestoreFlavorMultipliers.requests.ephemeralPercent }}
+      {{- end }}
+      {{- end }}
+      {{- end }}
+{{- end }}
+  replicas: {{ .Values.sharedDocumentDatabasePG.replicaCount }}
+  {{- end }}
+  {{- if .Values.sharedDocumentDatabasePG.settings }}
+  databaseServerConfig:
+    settings: {{ toYaml (.Values.sharedDocumentDatabasePG.settings) | nindent 6 }}
+  {{- end }}
+{{- end }}

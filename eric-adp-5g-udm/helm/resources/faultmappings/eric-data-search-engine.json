@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "ccsmPvcUsedRatioExceeded",
+        "createAlarm": true,
+        "defaultDescription": "CCSM Persistent Storage Disk Usage Exceed Threshold",
+        "defaultExpiration": 86400,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993092,
+        "category": "ProcessingErrorAlarm",
+        "specificProblem": "CCSM Persistent Storage Disk Usage Threshold Exceeded",
+        "probableCause": 151
+    }
+]

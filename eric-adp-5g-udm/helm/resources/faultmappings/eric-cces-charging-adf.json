@@ -1,0 +1,74 @@
+[
+    {
+        "faultName": "ccesChfConnectionFailure",
+        "vendor": 193,
+        "code": 12059392,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "CCES eric-cces-charging-adf Failed to Connect to CHF",
+        "createAlarm": true,
+        "defaultDescription": "CCES eric-cces-charging-adf failed to connect to CHF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "ccesScpConnectionFailure",
+        "vendor": 193,
+        "code": 12059393,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "CCES eric-cces-charging-adf Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "CCES eric-cces-charging-adf failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefNchfChargingFailureRatioExceeded",
+        "vendor": 193,
+        "code": 8591104,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF Nchf Charging Failure Ratio Exceeded",
+        "createAlarm": true,
+        "defaultDescription": "NEF Nchf charging failure ratio exceeded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefRfChargingFailureRatioExceeded",
+        "vendor": 193,
+        "code": 8591105,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF Rf Charging Failure Ratio Exceeded",
+        "createAlarm": true,
+        "defaultDescription": "NEF Rf charging failure ratio exceeded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "ccesMessageBusCommunicationFailure",
+        "vendor": 193,
+        "code": 12059395,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "CCES eric-cces-charging-adf Failed to Communicate with Message Bus",
+        "createAlarm": true,
+        "defaultDescription": "CCES eric-cces-charging-adf failed to communicate with Message Bus",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "ccesChargingAdfServiceUnavailable",
+        "vendor": 193,
+        "code": 12059396,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "CCES eric-cces-charging-adf service is unavailable",
+        "createAlarm": true,
+        "defaultDescription": "CCES eric-cces-charging-adf Service Unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    }
+]

@@ -1,0 +1,16 @@
+spec:
+  template:
+    spec:
+      containers:
+      {{- range .containerNames}}
+      - name: {{.}}
+        volumeMounts:
+        - mountPath: /tmp
+          name: log4shell-{{.}}
+      {{- end}}
+      volumes:
+      {{- range .containerNames}}
+        - emptyDir: {}
+          name: log4shell-{{.}}
+      {{- end}}
+

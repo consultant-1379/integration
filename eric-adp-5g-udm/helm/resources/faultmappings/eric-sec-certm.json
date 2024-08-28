@@ -1,0 +1,35 @@
+[
+    {
+        "faultName": "CertMCertificateToExpire",
+        "vendor": 193,
+        "code": 9699329,
+        "defaultDescription": "The threshold before certificate expiration has been crossed, and the certificate should be renewed to prevent a secure service failure.",
+        "defaultExpiration": 1800,
+        "defaultSeverity": "Warning",
+        "probableCause": 351,
+        "category": "ProcessingErrorAlarm",
+        "specificProblem": "Certificate Management, Certificate is about to Expire"
+    },
+    {
+        "faultName": "CertMTrustedCertificateToExpire",
+        "vendor": 193,
+        "code": 9699330,
+        "defaultDescription": "The threshold before trusted certificate expiration has been crossed, and the trusted certificate should be renewed to prevent a secure service failure.",
+        "defaultExpiration": 1800,
+        "defaultSeverity": "Warning",
+        "probableCause": 351,
+        "category": "ProcessingErrorAlarm",
+        "specificProblem": "Certificate Management, Trusted Certificate is about to Expire"
+    },
+    {
+        "faultName": "CertMAutomaticEnrollmentFailed",
+        "vendor": 193,
+        "code": 9699331,
+        "defaultDescription": "Automatic enrollment or renewal failed to execute due to local misconfiguration or remote enrollment service denial.",
+        "defaultExpiration": 1800,
+        "defaultSeverity": "Warning",
+        "probableCause": 307,
+        "category": "ProcessingErrorAlarm",
+        "specificProblem": "Certificate Management, Automatic Enrollment Failed"
+    }
+]

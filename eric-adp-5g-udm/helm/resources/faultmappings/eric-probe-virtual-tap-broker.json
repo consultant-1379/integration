@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "vTapPacketsDroppedFromOverload",
+        "createAlarm": true,
+        "vendor": 193,
+        "code": 14352385,
+        "defaultDescription": "Broker Overload",
+        "defaultExpiration": 120,
+        "defaultSeverity": "Major",
+        "probableCause": 158,
+        "category": "ProcessingErrorAlarm",
+        "specificProblem": "vTap Packets Dropped From Overload"
+    }
+]

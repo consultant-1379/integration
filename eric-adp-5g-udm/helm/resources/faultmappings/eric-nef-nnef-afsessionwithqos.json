@@ -1,0 +1,105 @@
+[
+    {
+        "faultName": "nefPcfConnectionFailure",
+        "vendor": 193,
+        "code": 8586496,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to PCF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to PCF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefBsfConnectionFailure",
+        "vendor": 193,
+        "code": 8586497,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to BSF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to BSF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8586498,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLhConnectionFailure",
+        "vendor": 193,
+        "code": 8586499,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to LH",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to LH",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefQosServiceOverload",
+        "vendor": 193,
+        "code": 8586500,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefQosServiceUnavailable",
+        "vendor": 193,
+        "code": 8586501,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+      "faultName": "nefScpConnectionFailure",
+      "vendor": 193,
+      "code": 8586502,
+      "category": "CommunicationsAlarm",
+      "probableCause": 22,
+      "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to SCP",
+      "createAlarm": true,
+      "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to SCP",
+      "defaultExpiration": 600,
+      "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefLmConnectionFailure",
+        "vendor": 193,
+        "code": 8586503,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Connect to LM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to connect to LM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefMessageBusCommunicationFailure", 
+        "vendor": 193, "code": 8586504, "category": "CommunicationsAlarm",
+        "probableCause": 22, "specificProblem": "NEF eric-nef-nnef-afsessionwithqos Failed to Communicate with Message Bus", 
+        "createAlarm": true, "defaultDescription": "NEF eric-nef-nnef-afsessionwithqos failed to communicate with Message Bus", 
+        "defaultExpiration": 600, "defaultSeverity": "Major"
+    }
+]

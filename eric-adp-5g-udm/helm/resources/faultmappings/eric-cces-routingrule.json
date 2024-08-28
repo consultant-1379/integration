@@ -1,0 +1,13 @@
+[
+  {
+    "code": 12058881,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "faultName": "ccesDbConnectionFailure",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "defaultDescription": "CCES eric-cces-routingrule failed to connect to DB",
+    "specificProblem": "CCES eric-cces-routingrule Failed to Connect to DB",
+    "createAlarm": true
+  }
+]

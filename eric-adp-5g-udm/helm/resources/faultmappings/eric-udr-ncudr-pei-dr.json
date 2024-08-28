@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "peiManagamentServiceOverloaded",
+    "vendor": 193,
+    "code": 7733267,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 207,
+    "category": "QualityOfServiceAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-ncudr-pei-dr Service Overloaded",
+    "defaultDescription": "Overload detected for PEI Management Service interface."
+  }
+]

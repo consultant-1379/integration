@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "udrAutomaticCCInconsistency",
+    "vendor": 193,
+    "code": 7733282,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 160,
+    "category": "ProcessingErrorAlarm",
+    "createAlarm": true,
+    "specificProblem": "UDR eric-udr-consistency-check Inconsistencies Detected",
+    "defaultDescription": "Automatic Consistency Check detected inconsistent data. Report available."
+  }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8586752,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-qosprovisioning Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-qosprovisioning failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    }
+]

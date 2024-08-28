@@ -1,0 +1,86 @@
+[
+    {
+        "faultName": "nefSpServiceUnavailable",
+        "vendor": 193,
+        "code": 8587520,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8587521,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefUdrConnectionFailure",
+        "vendor": 193,
+        "code": 8587522,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Failed to Connect to UDR",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter failed to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefUdmConnectionFailure",
+        "vendor": 193,
+        "code": 8587523,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Failed to Connect to UDM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter failed to Connect to UDM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefScpConnectionFailure",
+        "vendor": 193,
+        "code": 8587524,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefLhConnectionFailure",
+        "vendor": 193,
+        "code": 8587525,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Failed to Connect to LH",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter failed to connect to LH",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefSpServiceOverload",
+        "vendor": 193,
+        "code": 8587526,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-serviceparameter Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-serviceparameter is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    }
+]

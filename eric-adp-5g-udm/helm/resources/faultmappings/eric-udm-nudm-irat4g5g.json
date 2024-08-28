@@ -1,0 +1,38 @@
+[
+    {
+        "faultName": "udmIrat4g5gHssInstanceUnavailable",
+        "createAlarm": true,
+        "defaultDescription": "HSS is not available for UDM nudm-irat4g5g",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798805,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "HSS is not available for UDM nudm-irat4g5g"
+    },
+    {
+        "faultName": "udmIrat4g5gUdrConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-irat4g5g Fail to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798806,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-irat4g5g Fail to Connect to UDR"
+    },
+    {
+        "faultName": "udmIrat4g5gServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-irat4g5g Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798808,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-irat4g5g Service Overloaded"
+    }
+]

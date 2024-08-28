@@ -1,0 +1,38 @@
+[
+    {
+        "faultName": "udmVoiceAmfConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-voice Fail to Connect to AMF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798799,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-voice Fail to Connect to AMF"
+    },
+    {
+        "faultName": "udmVoiceUdrUnreachable",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-voice Fail to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798801,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-voice Fail to Connect to UDR"
+    },
+    {
+        "faultName": "udmVoiceServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-voice Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798803,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-voice Service Overloaded"
+    }
+]

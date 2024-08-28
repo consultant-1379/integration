@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "ccesUeIngressGatewayServiceUnavailable",
+    "vendor": 193,
+    "code": 12058813,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 158,
+    "specificProblem": "CCES eric-ingressgw-cces-ue-traffic Service Unavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCES eric-ingressgw-cces-ue-traffic service is unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  }
+]

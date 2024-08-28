@@ -1,0 +1,78 @@
+global:
+  registry:
+    url: sekidocker.rnd.ki.sw.ericsson.se
+  imageCredentials:
+    pullPolicy: IfNotPresent
+
+defaultRegistry: sekidocker.rnd.ki.sw.ericsson.se
+    
+imageCredentials:
+  repoPath: proj-renegade
+  
+images:
+  applyPatch:
+    # -- apply patch container name
+    name: eric-log4shell-hotpatch
+    # -- apply patch version
+    tag: %VERSION_APPLY_PATCH%
+  patchVolume:
+    # -- patch volume container name
+    name: eric-log4shell-hotpatch-init
+    # -- patch volume version
+    tag: %VERSION_PATCH_VOLUME%
+log4shell:
+  ccxxmicros:
+    - eric-udr-app-counters
+    - eric-udr-bulk-data-synchronizer
+    - eric-udr-cmmanager
+    - eric-udr-consistency-check-orchestrator
+    - eric-udr-consistency-check-worker
+    - eric-udr-data-model-controller
+    - eric-udr-dbmanager
+    - eric-udr-dbmonitor
+    - eric-udr-gudrestfe
+    - eric-udr-import-export-orchestrator
+    - eric-udr-import-export-orchestrator
+    - eric-udr-kvdb-ag
+    - eric-udr-kvdb-ag-operator
+    - eric-udr-license-handler
+    - eric-udr-message-bus-kf
+    - eric-udr-message-bus-monitor
+    - eric-udr-migration-orchestrator
+    - eric-udr-migration-task
+    - eric-udr-notificationsubscription
+    - eric-udr-nrfproxy
+    - eric-udr-nudrsvc
+    - eric-udr-provisioningfe
+    - eric-udr-provisioningrm
+    - eric-udr-rest-notifchecker
+    - eric-udr-rest-notifsender
+    - eric-udr-soap-notifchecker
+    - eric-udr-soap-notifsender
+    - eric-udr-system-monitor
+    - eric-udr-system-status-provider
+    - eric-udr-systemconfiguration-app-counters
+    - eric-udr-upgrade-hooks
+  adpmicros:
+    - eric-ctrl-bro
+    - eric-data-coordinator-zk
+    - eric-data-coordinator-zk-agent
+    - eric-data-distributed-coordinator-ed
+    - eric-data-distributed-coordinator-ed-agent
+    - eric-data-document-database-pg
+    - eric-data-document-database-pg-ah
+    - eric-data-document-database-pg-iam
+    - eric-data-document-database-pg-lm
+    - eric-data-message-bus-kf
+    - eric-data-search-engine
+    - eric-data-wide-column-database-cd
+    - eric-fh-alarm-handler
+    - eric-fh-snmp-alarm-provider
+    - eric-lm-combined-server
+    - eric-log-transformer
+    - eric-sec-certm
+    - eric-sec-ldap-server
+  envVariable:
+    - element: "deployments.apps/eric-log-transformer"
+      name: "TMP"
+      value: "/opt/logstash"

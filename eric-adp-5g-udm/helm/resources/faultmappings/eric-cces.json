@@ -1,0 +1,122 @@
+[
+  {
+    "faultName": "ccesScalingAspectOverload",
+    "createAlarm": true,
+    "defaultDescription": "Scaling Aspect Is Overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Scaling Aspect Is Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058808,
+    "probableCause": 207
+  }, 
+  {
+    "faultName": "ccesSbiOAuthAuthorizationFailure",
+    "createAlarm": true,
+    "defaultDescription": "CCES SBI OAuth Authorization Failure Ratio Exceeded",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES SBI OAuth Authorization Failure Ratio Exceeded",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 12058812,
+    "probableCause": 614
+  },
+  {
+    "faultName": "ccesWCDBCpuOverload",
+    "createAlarm": true,
+    "defaultDescription": "CCES WCDB CPU is over used",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES WCDB CPU Over Used",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058814,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesWCDBMemOverload",
+    "createAlarm": true,
+    "defaultDescription": "CCES WCDB memory is overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES WCDB JVM Memory Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058815,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesWCDBNodesDown",
+    "createAlarm": true,
+    "defaultDescription": "CCES WCDB Nodes are Down",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES WCDB Nodes Down",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058817,
+    "probableCause": 158
+  },
+  {
+    "faultName": "ccesPvcUsedRatioExceeded",
+    "createAlarm": true,
+    "defaultDescription": "CCES, Persistent Storage Disk Usage Exceed Threshold",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Pvc Used Ratio Exceeded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058810,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesWCDBDataInconsistency",
+    "createAlarm": true,
+    "defaultDescription": "CCES WCDB Data Incosistency in the System",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES WCDB Data Incosistency",
+    "defaultSeverity": "Warning",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058818,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesScheduledBackupError",
+    "createAlarm": true,
+    "defaultDescription": "CCES Scheduled Backup has failed",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Scheduled Backup Error",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058819,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesMissedScheduledBackup",
+    "createAlarm": true,
+    "defaultDescription": "CCES has missed scheduled backup",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Missed Scheduled Backup",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058820,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ccesBackupPvcOverUsage",
+    "createAlarm": true,
+    "defaultDescription": "CCES Backup PVC usage is too high",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Backup PVC Over Usage",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12058821,
+    "probableCause": 207
+  }
+]

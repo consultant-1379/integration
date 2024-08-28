@@ -1,0 +1,98 @@
+[
+  {
+    "faultName": "ngacDBConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime failed to connect to DB",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Failed to Connect to DB",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 18415616,
+    "probableCause": 22
+  },
+  {
+    "faultName": "ngacLHConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime failed to connect to LH",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Failed to Connect to LH",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 18415617,
+    "probableCause": 22
+  },
+  {
+    "faultName": "ngacOverloaded",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime is overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 18415618,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ngacEndpointConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime failed to connect to endpoint",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Failed to Connect to Endpoint",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 18415619,
+    "probableCause": 22
+  },
+  {
+    "faultName": "ngacProcessingError",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime failed to process request",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Failed to Process Request",
+    "defaultSeverity": "Major",
+    "category": "ProcessingErrorAlarm",
+    "vendor": 193,
+    "code": 18415620,
+    "probableCause": 158
+  },
+  {
+    "faultName": "ngacApiServiceOverloaded",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime API service is overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime API Service Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 18415621,
+    "probableCause": 207
+  },
+  {
+    "faultName": "ngacApiServiceError",
+    "createAlarm": true,
+    "defaultDescription": "NGAC eric-ngac-apiservice-runtime detects error: <detailed error information>",
+    "defaultExpiration": 600,
+    "specificProblem": "NGAC eric-ngac-apiservice-runtime Detected Error in API Service",
+    "defaultSeverity": "Major",
+    "category": "ProcessingErrorAlarm",
+    "vendor": 193,
+    "code": 18415622,
+    "probableCause": 158
+  },
+  {
+    "faultName": "seeNgacApiserviceRuntimeServiceUnavailable",
+    "createAlarm": true,
+    "defaultDescription": "SEE eric-ngac-apiservice-runtime service is unavailable",
+    "defaultExpiration": 600,
+    "specificProblem": "SEE eric-ngac-apiservice-runtime Service Unavailable",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 18415623,
+    "probableCause": 158
+  }
+]

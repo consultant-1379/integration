@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: "0.0.1"
+description: Ericsson common 5G@UDM & Policy ADP Generic Services
+name: eric-adp-5g-udm
+version: 1.104.3+1
+home: https://wiki.lmera.ericsson.se/wiki/PDU_UDM/UNIV/5G_Integration
+maintainers:
+- name: Feature Integration Team
+  email: PDL5GUDMFE@pdl.internal.ericsson.com

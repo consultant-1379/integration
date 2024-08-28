@@ -1,0 +1,38 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ include "eric-log4shell-patch.name" . }}
+rules:
+- apiGroups: ['']
+  resources: ['pods']
+  verbs:     ["get", "list"]
+- apiGroups: ['apps']
+  resources: ['deployments', 'statefulsets', 'cronjobs', 'daemonsets']
+  verbs:     ["get", "list", "patch"]
+- apiGroups: ['']
+  resources: ['pods/exec']
+  verbs:     ["create"]
+- apiGroups: ['batch']
+  resources: ['cronjobs']
+  verbs:     ["get", "list", "patch"]
+- apiGroups: ['kvdbag.data.ericsson.com']
+  resources: ['geodeclusters']
+  verbs:     ["get", "list", "patch"]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "eric-log4shell-patch.name" . }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "eric-log4shell-patch.name" . }}
+roleRef:
+  kind: Role
+  name: {{ include "eric-log4shell-patch.name" . }}
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: {{ include "eric-log4shell-patch.name" . }}
+---

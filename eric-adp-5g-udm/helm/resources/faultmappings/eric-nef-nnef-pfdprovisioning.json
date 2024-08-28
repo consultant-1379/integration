@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8591616,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-pfdprovisioning Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-pfdprovisioning failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    }
+]

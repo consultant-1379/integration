@@ -1,0 +1,1043 @@
+# ########################################################################### #
+# Deployment Tags, select which 5g@udm service would like to deploy
+# ########################################################################### #
+tags:
+  eric-adp-common: false
+  eric-data-document-database-pg: true
+  eric-cm-mediator: true
+  eric-pm-server: true
+  eric-pm-bulk-reporter: true
+  eric-data-coordinator-zk: true
+  eric-data-message-bus-kf: true
+  eric-log-shipper: true
+  eric-data-search-engine: true
+  eric-fh-alarm-handler: true
+  eric-fh-snmp-alarm-provider: true
+  eric-cm-yang-provider: true
+  eric-odca-diagnostic-data-collector: true
+  eric-log-transformer: true
+  eric-ctrl-bro: true
+  eric-sec-access-mgmt: false
+  eric-sec-ldap-server: true
+  eric-sec-key-management: true
+  eric-sec-sip-tls: true
+  eric-data-distributed-coordinator-ed: true
+  eric-cnom-server: true
+  eric-tm-ingress-controller-cr: true
+  eric-lm-combined-server: true
+  eric-sec-certm: true
+  eric-lm-unique-object-reporter: false
+  eric-sec-admin-user-management: true
+  eric-data-object-storage-mn: true
+  eric-si-application-sys-info-handler: true
+  eric-pm-resource-monitor: true
+  eric-probe-virtual-tap-broker: true
+
+global:
+  hooklauncher:
+    executor: integration
+    executorCharts:
+      - eric-adp-5g-udm
+  # nodeSelector:
+  security:
+    tls:
+      enabled: true
+  # pullSecret:
+  # registry:
+  #  imagePullPolicy: IfNotPresent
+    # @DEPRECATED - to be removed till all services finish deprecation process
+  #  pullSecret:
+  # Set dummy values for license manager
+  ericsson:
+    licensing:
+      licenseDomains:
+        - productType: "ProductName1"
+          customerId: "12345678"
+          swltId: "Palaven"
+  istio:
+    bootstrapOverride: true
+    annotations:
+      # This is used to annotate pods with sidecars, so they are automatically
+      # restarted and reinjected with the correct proxy version on SM upgrades
+      # More info at the end of the README.md
+      # NOTE! It must be updated *manually* for now on SM uplifts
+      serviceMesh: 12.0.0
+
+  log:
+    outputs: ["k8sLevel"]
+    streamingMethod: indirect
+  # Used by this integration chart to control if the ExternalCertificate CR of
+  # certM should be created to manage secrets of certificates
+  createExternalCertificateCR: true
+  adpBR:
+    brLabelKey: adpbrlabelkey
+  applicationId: "ccxx"
+
+  alarms:
+    nfDiscoveryAgentNoAvailableDestination:
+      enabled: true
+
+  securityPolicy:
+    rolekind: ""
+
+  # Configuration options for Document Database PG (DDB-PG) service.
+  # For enabling the Operator-based deployment or the non-Operator deployment, the global parameter 
+  # global.documentDatabasePG.operator.enabled is to be set to true or false, respectively.
+  documentDatabasePG:
+    operator:
+      # When enabled=true the Operator-based deployment is used, otherwise the non-Operator deployment is used
+      enabled: false
+
+  backupTypes:
+    - name: configuration-data
+      dataSets:
+      - name: CMM
+      - name: IAM
+
+  # Configuration option for backupAndRestore_template.yaml file.
+  # For enabling backupAndRestore_template.yaml file, global parameter 
+  # global.backupAndRestoreTemplate.enabled is to be set to true or false, respectively.
+  backupAndRestoreTemplate:
+    enabled: false
+
+# ########################################################################### #
+# Custom ADP Generic Services Values (Overwrite the default values)
+# ########################################################################### #
+
+eric-lcm-smart-helm-hooks:
+  enabled: true
+
+eric-fh-alarm-handler:
+  nodeSelector: {}
+  service:
+    type: ClusterIP
+    endpoints:
+      restapi:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+  ingress:
+    enabled: false
+  backend:
+    hostname: "eric-data-document-database-pg"
+    dbname: adp_gs_cm
+    dbuser: customname
+    #Enable below for DDB split and comment out above
+    #hostname: "eric-data-document-database-pg-ah"
+    #dbname: adp_gs_ah
+  alarmhandler:
+    configmap:
+      faultmappings: eric-adp-5g-udm-faultmappings
+    rest:
+      fi:
+        api:
+          enabled: true
+
+eric-fh-snmp-alarm-provider:
+  nodeSelector:
+    snmpAP: {}
+    hooklauncher: {}
+  ingress:
+    enabled: false
+  service:
+    type: LoadBalancer
+    secretName: snmp-alarm-provider-config
+  probes:
+    snmpAP:
+      livenessProbe:
+        initialDelaySeconds: 120
+
+eric-data-document-database-pg:
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: adp_gs_cm
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    housekeeping_threshold: 70
+  brAgent:
+    enabled: true
+    backupTypeList:
+      - "configuration-data"
+    logicalDBBackupEnable: true
+    backupDataModelConfig: eric-cm-mediator-br-agent
+  log:
+    schema: "adp"
+
+eric-data-document-database-pg-ah:
+  enabled: false
+  #enabled: true
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: adp_gs_ah
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    size: 4Gi
+  log:
+    schema: "adp"
+
+eric-data-document-database-pg-lm:
+  enabled: false
+  #enabled: true
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: adp_gs_lm
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    size: 4Gi
+  log:
+    schema: "adp"
+
+eric-data-document-database-pg-iam:
+  enabled: false
+  #enabled: true
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: adp_gs_iam
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    size: 4Gi
+  log:
+    schema: "adp"
+
+eric-data-document-database-pg-app:
+  enabled: false
+  #enabled: true
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: adp_gs_app
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    size: 4Gi
+  log:
+    schema: "adp"
+
+eric-data-document-database-pg-cnom:
+  enabled: false
+  #enabled: true
+  nodeSelector:
+    postgres: {}
+    brAgent: {}
+    cleanuphook: {}
+  postgresDatabase: cnom
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+    size: 1Gi
+  log:
+    schema: "adp"
+
+sharedDocumentDatabasePG:
+  # The enabled parameter is to be set to true for creating the shared DDB-PG instance as Kubernetes Custom Object (CO).
+  enabled: false
+  replicaCount: 2
+  instanceName: eric-data-document-database-pg
+  logLevel: info
+  persistentStorage:
+    housekeepingThresholdPercentage: 100
+    storageClassName: erikube-rbd
+  settings:
+  backupRestore:
+    logicalDbDataSets:
+      - name: CMM
+        configMapRef: eric-cm-mediator-br-agent
+      - name: IAM
+        configMapRef: eric-sec-access-mgmt-co-br-agent
+    globalDataSet:
+  resources:
+    flavor: typical
+
+    flavorMultipliers:
+      limits:
+        cpuPercent: 100
+        memoryPercent: 100
+        ephemeralPercent: 100
+      requests:
+        cpuPercent: 100
+        memoryPercent: 100
+        ephemeralPercent: 100
+      persistentStorage:
+        size: 8Gi
+
+    backupRestoreFlavorMultipliers:
+      requests:
+        cpuPercent: 100
+        memoryPercent: 100
+        ephemeralPercent: 100
+      limits:
+        cpuPercent: 100
+        memoryPercent: 100
+        ephemeralPercent: 100
+
+eric-data-coordinator-zk:
+  nodeSelector:
+    brAgent: {}
+    datacoordinatorzk: {}
+  persistence:
+    persistentVolumeClaim:
+      storageClassName: "erikube-rbd"
+      enabled: true
+  # For DCZK >= 1.12.0
+  service:
+    endpoints:
+      datacoordinatorzk:
+        tls:
+           enforced: optional
+           verifyClientCertificate: "optional"
+  affinity:
+    podAntiAffinity: "hard"
+
+eric-data-message-bus-kf:
+  nodeSelector: {}
+  resources:
+    messagebuskf:
+      requests:
+        memory: "2048Mi"
+      limits:
+        memory: "4096Mi"
+  persistence:
+    persistentVolumeClaim:
+      storageClassName: "erikube-rbd"
+      size: "25Gi"
+      enabled: true
+  persistentVolumeClaim:
+    enabled: false
+  jmx:
+    enabled: true
+    enableRemote: false
+  configurationOverrides:
+    log.retention.bytes: "104857600"
+    # For MBKF >= 2.0.0
+    auto.create.topics.enable: true
+  # For message-bus-kf 1.12.0
+  service:
+    endpoints:
+      messagebuskf:
+        tls:
+          enforced: "optional"
+          verifyClientCertificate: "optional"
+  affinity:
+    podAntiAffinity: "hard"
+
+eric-cm-mediator:
+  nodeSelector: {}
+  kafka:
+    hostname: eric-data-message-bus-kf-client
+    port: 9092
+  cmkey:
+    enable: true
+  backend:
+    dbuser: customname
+  # "optional" to support non-mtls and mtls in parallel for short term
+  service:
+    endpoints:
+      restapi:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+
+eric-pm-bulk-reporter:
+  nodeSelector: {}
+  service:
+    servicePort: 9022
+    type: LoadBalancer
+  persistentVolumeClaim:
+    enabled: true
+    storageClassName: erikube-rbd
+  userConfig:
+    ldap:
+      enabled: true
+      rolesConfig:
+        readOnlyGroup: system-security-admin,system-read-only
+        readWriteGroup: system-admin
+  env:
+    iscompressed: true
+  thresholdReporter:
+    enabled: true
+    restAPI: true
+  security:
+    keyManagement:
+      enabled: true
+  aumSupport:
+    enabled: true
+  applicationId:
+    enabled: true
+
+eric-log-shipper:
+  nodeSelector:
+    hooklauncher: {}
+  rbac:
+    automountServiceAccountToken: true
+    createClusterRole: true
+    createClusterRoleBinding: true
+  logshipper:
+    cfgData: ""
+    autodiscover:
+      enabled: true
+      useContainerInput: true
+      namespace: ".RELEASE.NAMESPACE"
+      logplane: adp-app-logs
+    harvester:
+      ignoreOlder: "24h"
+  resources:
+    logshipper:
+      limits:
+        memory: 2Gi
+        cpu: 500m
+      requests:
+        memory: 2Gi
+        cpu: 300m
+
+eric-log-transformer:
+  nodeSelector:
+    logtransformer: {}
+    hooklauncher: {}
+  config:
+    adpJson:
+      validation:
+        enabled: false
+  syslog:
+    syslogLogplane: adp-app-logs
+  searchengine:
+    logplaneConfig:
+      - field: "[facility]"
+        value: "log audit"
+        newLogplane: "adp-app-audit-logs"
+      - field: "[severity]"
+        value: "debug"
+        newLogplane: "adp-app-debug-logs"
+      - field: "[extra_data][asi][log_plane]"
+        value: "alarm"
+        newLogplane: "adp-app-asi-logs"
+      - field: "[facility]"
+        value: "security/authorization messages"
+        newLogplane: "adp-app-security-logs"
+  # 1 replica observed to be low performance in our deployment
+  replicaCount: 2
+  egress:
+    syslog:
+      inclusions: []
+      exclusions: []
+  ensureOnceDelivery:
+    enabled: true
+
+eric-data-search-engine:
+  nodeSelector:
+    data: {}
+    ingest: {}
+    master: {}
+    bragent: {}
+  service:
+    network:
+      protocol:
+         IPv6: false
+    # For data-search-engine >= 5.0.0
+    endpoints:
+      rest:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+  persistence:
+    data:
+      persistentVolumeClaim:
+        size: "15Gi"
+        storageClassName: erikube-rbd
+  # For data-search-engine >= 6.0.0-29
+    master:
+      persistentVolumeClaim:
+        size: "16Mi"
+        storageClassName: erikube-rbd
+  jvmHeap:
+    ingest: "1024m"
+    master: "512m"
+    data: "1024m"
+  resources:
+    ingest:
+      limits:
+        cpu: "500m"
+        memory: "2Gi"
+      requests:
+        cpu: "500m"
+        memory: "2Gi"
+  # SE >= 7.6.0 During deprecation period all applications that need
+  # this to be enabled must explicitly enable it.
+  # After deprecation end default setting will be false.
+  autoSetRequiredWorkerNodeSysctl: false
+  affinity:
+    podAntiAffinity: "hard"
+  # SE curator is going to be phase out. Search Engine's ISM plugin 
+  # will replace it to perform existing housekeeping tasks
+  index_management:
+    enabled: true
+    job_interval_in_minutes: 60
+    policies:
+      - description: "Remove debug logs older than 3 days"
+        indices:
+          - adp-app-debug-logs*
+        priority: 1
+        states:
+          - name: init
+            transitions:
+              - condition: min_index_age=3d
+                destination_state: delete
+          - name: delete
+            actions:
+              - delete
+      - description: "Remove non-audit, non-debug logs older than 15 days"
+        indices:
+          - adp-app-logs*
+        priority: 1
+        states:
+          - name: init
+            transitions:
+              - condition: min_index_age=15d
+                destination_state: delete
+          - name: delete
+            actions:
+              - delete
+      - description: "Remove audit/alarm/security logs older than 30 days"
+        indices:
+          - adp-app-audit-logs*
+          - adp-app-asi-logs*
+          - adp-app-security-logs*
+        priority: 1
+        states:
+          - name: init
+            transitions:
+              - condition: min_index_age=30d
+                destination_state: delete
+          - name: delete
+            actions:
+              - delete
+      - description: "Remove jeager span and jeager service indices older than 8 days"
+        indices:
+          - jaeger-span*
+          - jaeger-service*
+        priority: 1
+        states:
+          - name: init
+            transitions:
+              - condition: min_index_age=8d
+                destination_state: delete
+          - name: delete
+            actions:
+              - delete
+    delete_indices_by_diskspace:
+      - index: adp-app-debug-logs*
+        size: 4gb
+      - index: adp-app-logs*
+        size: 8gb
+      - index: jaeger-span*
+        size: 12gb
+
+eric-cm-yang-provider:
+  nodeSelector:
+   eric-cm-yang-provider: {}
+   hooklauncher: {}
+  service:
+    type: LoadBalancer
+  externaldb:
+    dbuser: customname
+  ldap:
+    enabled: true
+    ipv6Enabled: false
+    enableChangePassword: true
+  keyManagement:
+    storeHostKeys: true
+  cliExtensionCmds:
+    showAlarms:
+      enabled: true
+    showAlarmsHistory:
+      enabled: true
+  objectStorage:
+    secretName: eric-data-object-storage-mn-secret
+  rollback:
+    enableRollbackCommands: true
+    directory: /rollback_files
+    numberOfRollbacksToStore: 20
+  pmMetrics:
+    # CPA prometheus metrics instrumentation
+    enabled: true
+    # Enable to show pm-metrics CLI
+    enableQueryMetricsCommands: true
+  nbiNotifications:
+    notifyInternalChanges: true
+  auditLog_v2: true
+  enableCliCommandAuditLogs: true
+
+eric-odca-diagnostic-data-collector:
+  nodeSelector:
+    hooklauncher: {}
+  resources:
+    diagnostic-data-collector:
+      requests:
+        memory: 1Gi
+        cpu: 500m
+      limits:
+        memory: 2Gi
+        cpu: "1"
+  env:
+    logIndices:
+      - "adp-app-logs*"
+      - "adp-app-debug-logs*"
+      - "adp-app-asi-logs*"
+    enablePromReceiver: true
+    enableCmConfig: true
+    enableCmypConfig: true
+    adminState: locked
+    enableInitialConfig: false
+  kms:
+    enabled: true
+  tls:
+    enabled: true
+  sftpCredentials:
+    enabled: false
+  # From DDC 2.2.0
+  service:
+    endpoints:
+      pm_scrape:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      pm_rw:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      cm_subscription:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+  manualService:
+    endpoints:
+      pm_scrape:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      cm_action:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+  swim:
+    enabled: false
+  appSysInfoHandler:
+    # Flag to enable Software Information collection from ASIH instead of SwIM
+    enabled: true
+  kubernetesInfo:
+    enabled: true
+  ddcRemoteWrite:
+    enabled: true
+
+eric-ctrl-bro:
+  nodeSelector:
+    backupAndRestore: {}
+  persistence:
+    persistentVolumeClaim:
+      storageClassName: erikube-rbd
+  #security:
+  #  tls:
+  #    broToAgent:
+  #      enabled: true
+  bro:
+    enableConfigurationManagement: true
+    enableAgentDiscovery: true
+  service:
+    endpoints:
+      broToAgent:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      restActions:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      scrape:
+        pm:
+          tls:
+            enforced: optional
+            verifyClientCertificate: optional
+      cmmHttpNotif:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+  metrics:
+    enabled: true
+
+eric-sec-sip-tls:
+  nodeSelector:
+    sip-tls: {}
+    hooklauncher: {}
+  # imageCredentials:
+    # pullSecret: null
+    # @DEPRECATED - to be removed till all services finish deprecation process
+    # pullPolicy: IfNotPresent
+    # registry:
+      # @DEPRECATED - to be removed till all services finish deprecation process
+      # pullSecret: null
+      # imagePullPolicy: null
+  internalCertificate:
+    validLifetimeSeconds: 604800
+  keyManagement:
+    port: 8210
+  alarmInstanceModel:
+    compliantWithFHDRs:
+      enabled: true
+  affinity:
+    podAntiAffinity: "hard"
+  # To enable the feature to send fault indications through RESTful API
+  alarmHandler:
+    useAPIDefinition: true
+  metrics:
+    enabled: false
+
+eric-sec-key-management:
+  nodeSelector:
+    kms: {}
+    bootstrapJob: {}
+    hooklauncher: {}
+  persistence:
+    type: etcd
+  shelter:
+    enabled: true
+  #To be deprecated
+  #replicas: 2
+  replicaCount:
+    kms: 2
+
+eric-sec-ldap-server:
+  nodeSelector:
+    ldap: {}
+    ldapProxy: {}
+  persistentVolumeClaim:
+    storageClassName: erikube-rbd
+  ldap:
+    pwdpolicy:
+      pwdMaxFailure: 3
+    aum:
+      enabled: true
+  brAgent:
+    enabled: true
+  replicaCount: 2
+  service:
+    endpoints:
+      ldap:
+        tls:
+          enforced: required
+          verifyClientCertificate: required
+
+eric-data-distributed-coordinator-ed:
+  nodeSelector:
+    brAgent: {}
+    dced: {}
+  brAgent:
+    enabled: true
+    brLabelValue: "dc-etcd"
+    backupTypeList:
+      - "configuration-data"
+    properties:
+      applicationProperties: |-
+         dced.agent.restore.type=overwrite
+         dced.excluded.paths=/shelter,/kms/core/lock
+  #security:
+  #  tls:
+  #    agentToBro:
+  #      enabled: true
+    etcd:
+      acls:
+        adminSecret: eric-data-distributed-coordinator-creds
+  persistence:
+    persistentVolumeClaim:
+      size: "2Gi"
+      storageClassName: "erikube-rbd"
+      enabled: true
+    brAgent:
+      backupVolume:
+        storageClassName: "erikube-rbd"
+  service:
+    endpoints:
+      dced:
+        tls:
+          enforced: "required"
+          verifyClientCertificate: "optional"
+
+eric-cnom-server:
+  nodeSelector: {}
+  service:
+    endpoints:
+      api:
+        tls:
+          ca:
+          - name: eric-tm-ingress-controller-cr-client-ca
+            bundle: ca.pem
+  # Added by UDM&P ADP common, for creating ICCR CR
+  fqdn: cnom.ericsson.com
+  legalNotice: "IF YOU ARE NOT AN AUTHORIZED USER, PLEASE EXIT IMMEDIATELY\n\nThis system processes personal information. Handle personal information with care. Misuse, including unauthorized access, is grounds for legal action. Version: 1.0, Date: October 27, 2020."
+  authentication:
+    local:
+      enabled: false
+    ldap:
+      enabled: true
+  # Added by UDM&P ADP common, to make external TLS settings configurable
+  externalTls:
+    enabled: true
+  documentDatabasePg:
+    enabled: true
+    #default value to be used for host if single Document Database instance with multiple logical databases will be used
+    host: eric-data-document-database-pg
+    #value to be set for host if dedicated Document Database instance will be used
+    #host: eric-data-document-database-pg-cnom
+    #database: cnom
+    user: cnom
+  documentDatabase:
+    enabled: false
+
+eric-tm-ingress-controller-cr:
+  contour:
+    namespaceBound: true
+  nodeSelector:
+    contour: {}
+    envoy: {}
+  rbac:
+    create: true
+  service:
+    externalTrafficPolicy: Cluster
+  # Added in eric-adp-5g-udm for creating httpproxy and ExternalCertificate CR
+  tlsSecret: iccr-external-tls-secret
+  minimumProtocolVersion: "1.2"
+  #ingressClass: ccxx
+  externalCertificate:
+    keyAndCertificateName: iccr-external-tls-key/iccr-external-tls-certificate
+  clientCertificate:
+    enabled: true
+  metrics:
+    enabled: false
+  log:
+    format: adp
+  logLevel:
+    access: info
+  envoy:
+    disable_http: true
+
+eric-lm-combined-server:
+  database:
+    host: eric-data-document-database-pg
+    name: adp_gs_cm
+    #host: eric-data-document-database-pg-lm
+    #name: adp_gs_lm
+    userName: customname
+  # Set dummy values
+  licenseServerClient:
+    licenseServer:
+      thrift:
+        host: "nels.network.local"
+    asih:
+      # licenseServerClient.asih.host - The host name of ASIH service
+      host: eric-si-application-sys-info-handler
+      # licenseServerClient.asih.port - The listener port of ASIH service, 8080 (http) or 5000 (https)
+      port: 5000
+      # licenseServerClient.asih.tls - TLS is enabled or not on ASIH connection, true or false
+      tls: true
+  nodeSelector:
+    licenseConsumerHandler: {}
+    licenseServerClient: {}
+    hooklauncher: {}
+  service:
+    endpoints:
+      licenseConsumerHandler:
+        restapi:
+          tls:
+            enforced: optional
+            verifyClientCertificate: optional
+  affinity:
+    podAntiAffinity: "soft"
+  features:
+    alarmHandling:
+      enabled: false
+
+eric-pm-server:
+  nodeSelector:
+    eric-pm-server: {}
+  server:
+    extraArgs:
+      #set storage.tsdb.retention.size to 85% of persistentVolume.size
+      storage.tsdb.retention.size: 17GB
+    extraSecretMounts:
+      - name: etcd-client-cert
+        mountPath: /var/run/secrets/etcd/client
+        subPath: ""
+        readOnly: true
+        defaultMode: 420
+        secretName: eric-data-distributed-coordinator-ed-etcdctl-client-cert
+      - name: etcd-cacert
+        mountPath: /var/run/secrets/etcd/cacert
+        subPath: ""
+        readOnly: true
+        defaultMode: 420
+        secretName: eric-sec-sip-tls-trusted-root-cert
+    serviceAccountName: eric-adp-5g-udm-pm-server
+    persistentVolume:
+      enabled: true
+      storageClass: erikube-rbd
+      # Set to big value as PVC will soon be filled up due to clusterMorniting,
+      # when changing size update storage.tsdb.retention.size as well
+      size: 20Gi
+    retention: "3d"
+    configMapOverrideName: eric-adp-5g-udm-pm-server-config
+  #serverFiles:
+    #prometheus.yml: |
+      # VNFs can add recording rules here
+      #ruleFiles:
+        #eric-pm-rules.yml: |
+        # .....
+        #eric-act-rules.yml: |
+        # .....
+      # VNFs can add pm jobs(will be added to default ones)
+  #   scrape_configs: |
+  #     - job_name: 'my-pm-job'
+  #       kubernetes_sd_configs:
+  #       - role: pod
+  #         namespaces:
+  #           names:
+  #           - {{ .Release.Namespace }}
+
+  #       relabel_configs:
+  #       - source_labels: [__meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+  #         action: keep
+  #         regex: istio-citadel;http-monitoring
+  rbac:
+    appMonitoring:
+      enabled: true
+      federation:
+        jobOverride: false
+        cadvisorJob: true
+  resources:
+    eric-pm-server:
+      limits:
+        cpu: '2'
+        memory: 15Gi
+      requests:
+        cpu: 500m
+        memory: 2048Mi
+  # For PMS >= 4.0.0
+  service:
+    endpoints:
+      scrapeTargets:
+        tls:
+          enforced: required
+      reverseproxy:
+        tls:
+          verifyClientCertificate: required
+          # FOR PMS >= 5.1.0
+          certificateAuthorityBackwardCompatibility: false
+  podPriority:
+    eric-pm-server:
+      priorityClassName: ""
+  limitRWDestionations: false
+  externalRemoteWrite: []
+  log:
+    format: json
+
+  scrapeConfig:
+    deprecatedJobs:
+      selfMonitoring:
+        enabled: false
+
+eric-sec-certm:
+  nodeSelector: {}
+  imageCredentials:
+    # @DEPRECATED - to be removed till all services finish deprecation process
+    pullPolicy: IfNotPresent
+    pullSecret:
+    registry:
+      # @DEPRECATED - to be removed till all services finish deprecation process
+      pullSecret:
+      imagePullPolicy: IfNotPresent
+  resources:
+    certm:
+      limits:
+        # Experimental feature. Specifying incorrect ephemeral-storage may cause unexpected pod evictions.
+        ephemeral-storage:
+      requests:
+        # Experimental feature. Specifying incorrect ephemeral-storage may cause unexpected pod evictions.
+        ephemeral-storage:
+
+eric-sec-admin-user-management:
+  imageCredentials:
+    pullSecret:
+  service:
+    endpoints:
+      cmmCallback:
+        tls:
+          verifyClientCertificate: optional
+      metrics:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+      probes:
+        tls:
+          enforced: optional
+  notices:
+    legal: "IF YOU ARE NOT AN AUTHORIZED USER, PLEASE EXIT IMMEDIATELY"
+    privacy: "This system processes personal information. Handle personal information with care. Misuse, including unauthorized access, is grounds for legal action. Version: 1.0, Date: October 27, 2020."
+
+eric-lm-unique-object-reporter:
+  service:
+    endpoints:
+      restApiLicenseConsumer:
+        tls:
+          enforced: optional
+          verifyClientCertificate: optional
+
+eric-data-object-storage-mn:
+  credentials:
+    kubernetesSecretName: ""
+  persistence:
+    persistentVolumeClaim:
+      storageClassName: "erikube-rbd"
+
+eric-sec-access-mgmt:
+  persistence:
+    dbName: adp_gs_cm
+    dbHost: eric-data-document-database-pg
+    #Enable below for DDB split and comment out above
+    #dbName: adp_gs_iam
+    #dbHost: "eric-data-document-database-pg-iam"
+  tls:
+    client:
+      pg:
+        subject: customname
+        #Enable below for DDB split
+        #issuer: eric-data-document-database-pg-iam-client-ca
+  # Number of IAM replicas. Value must be must be 2 or more for resiliency
+  replicaCount: 2
+  application:
+    recordLoginTimeEnabled: true
+  ldap:
+     enabled: true
+     denyLockedUsers: true
+  accountManager:
+    enabled: true
+
+eric-pm-resource-monitor:
+  enabled: true
+  objectStorage:
+    accessSecretName: "eric-data-object-storage-mn-secret"
+
+eric-si-application-sys-info-handler:
+  asih:
+    pmMetricsTLS: true
+    applicationId: "ccxx"
+  applicationInfoService:
+    enabled: false
+    sendAppReport: false
+      
+eric-probe-virtual-tap-broker:
+  vpngw:
+    enabled: false

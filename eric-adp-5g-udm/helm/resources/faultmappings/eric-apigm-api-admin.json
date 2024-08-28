@@ -1,0 +1,26 @@
+[
+  {
+    "faultName": "apiAdminDBConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-api-admin failed to connect to DB",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-admin Failed to Connect to DB",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "vendor": 193,
+    "code": 9240576
+  },
+  {
+    "faultName":  "seeApiAdminServiceUnavailable",
+    "createAlarm":  true,
+    "defaultDescription":  "SEE eric-apigm-api-admin service is unavailable",
+    "defaultExpiration":  600,
+    "specificProblem":  "SEE eric-apigm-api-admin Service Unavailable",
+    "defaultSeverity":  "Major",
+    "category":  "QualityOfServiceAlarm",
+    "vendor":  193,
+    "code":  9240577,
+    "probableCause":  158
+  }
+]

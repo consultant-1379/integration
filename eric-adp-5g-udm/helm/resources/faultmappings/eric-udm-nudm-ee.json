@@ -1,0 +1,38 @@
+[
+    {
+        "faultName": "udmEeAmfConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-ee Fail to Connect to AMF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798830,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-ee Fail to Connect to AMF"
+    },
+    {
+        "faultName": "udmEeServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-ee Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798831,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-ee Service Overloaded"
+    },
+    {
+        "faultName": "udmEeNotificationConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-ee Fail to send notification to NEF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798835,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-ee Notification Fail to connect to UDM consumer"
+    }
+]

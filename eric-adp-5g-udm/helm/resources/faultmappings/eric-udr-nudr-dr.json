@@ -1,0 +1,38 @@
+[
+  {
+    "faultName": "restNotificationsEndpointUnreachable",
+    "vendor": 193,
+    "code": 7733250,
+    "defaultSeverity": "Minor",
+    "defaultExpiration": 2419200,
+    "probableCause": 22,
+    "category": "CommunicationsAlarm",
+    "specificProblem": "UDR eric-udr-nudr-dr REST Notifications Endpoint Unreachable",
+    "createAlarm": true,
+    "defaultDescription": "REST Notifications Endpoint is unreachable."
+  },
+  {
+    "faultName": "nudrServiceOverloaded",
+    "createAlarm": true,
+    "defaultDescription": "Overload detected for Nudr interface.",
+    "defaultExpiration": 3600,
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 7733261,
+    "probableCause": 207,
+    "specificProblem": "UDR eric-udr-nudr-dr Service Overloaded"
+  },
+  {
+    "faultName": "nudrSbiOauthFailure",
+    "createAlarm": true,
+    "defaultDescription": "Ratio of OAuth2 unsuccessful responses sent crossed configured threshold value for eric-udr-nudr-dr service.",
+    "defaultExpiration": 3600,
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 7733281,
+    "probableCause": 1614,
+    "specificProblem": "UDR SBI OAuth Authorization Failure Ratio Exceeded"
+  }
+]

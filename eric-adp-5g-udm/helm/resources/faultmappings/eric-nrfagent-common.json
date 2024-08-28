@@ -1,0 +1,26 @@
+[
+  {
+    "faultName": "nfNrfAgentUnsuccessfulResponsesSentRatioThresholdCrossed",
+    "createAlarm": true,
+    "defaultDescription": "NRFAgent Unsuccessful Responses Sent Ratio Threshold Crossed",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 8060937,
+    "probableCause": 203,
+    "specificProblem": "NRFAgent Unsuccessful Responses Sent Ratio Threshold Crossed"
+  },
+  {
+    "faultName": "nfNrfAgentUnsuccessfulResponsesReceivedRatioThresholdCrossed",
+    "createAlarm": true,
+    "defaultDescription": "NRFAgent Unsuccessful Responses Received Ratio Threshold Crossed",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 8060938,
+    "probableCause": 203,
+    "specificProblem": "NRFAgent Unsuccessful Responses Received Ratio Threshold Crossed"
+  }
+]

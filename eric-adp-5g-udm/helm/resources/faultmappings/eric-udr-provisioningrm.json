@@ -1,0 +1,26 @@
+[
+  {
+    "faultName": "replayModeNotStarted",
+    "vendor": 193,
+    "code": 7733268,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 22,
+    "category": "CommunicationsAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-provisioningrm Replay Mode Not Activated",
+    "defaultDescription": "Unable to activate Replay Mode."
+  },
+  {
+    "faultName": "replayModeStopped",
+    "vendor": 193,
+    "code": 7733269,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 306,
+    "category": "CommunicationsAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-provisioningrm Replay Mode Stopped",
+    "defaultDescription": "Replay Mode stopped due to unresponsive replay entity."
+  }
+]

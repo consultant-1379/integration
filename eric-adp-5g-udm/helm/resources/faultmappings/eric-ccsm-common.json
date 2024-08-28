@@ -1,0 +1,98 @@
+[
+  {
+    "faultName": "ccsmScalingAspectOverload",
+    "createAlarm": true,
+    "defaultDescription": "CCSM Scaling Aspect Overloaded",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993089,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 207,
+    "specificProblem": "CCSM Scaling Aspect Overloaded"
+  },
+  {
+    "faultName": "ccsmLicenseManagerUnavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCSM License Manager Unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993101,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 100505,
+    "specificProblem": "CCSM License Manager Unavailable"
+  },
+  {
+    "faultName": "ccsmLmagentLicenseControlFailure",
+    "createAlarm": true,
+    "defaultDescription": "Failure in License Control System",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Minor",
+    "vendor": 193,
+    "code": 11993090,
+    "category": "CommunicationsAlarm",
+    "probableCause": 158,
+    "specificProblem": "CCSM Lmagent License Control Failure"
+  },
+  {
+    "faultName": "ccsmLmagentCcsmServicesInactive",
+    "createAlarm": true,
+    "defaultDescription": "CCSM Inactive by License Control",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Minor",
+    "vendor": 193,
+    "code": 11993091,
+    "category": "OperationalViolation",
+    "probableCause": 100506,
+    "specificProblem": "CCSM Lmagent Services Inactive"
+  },
+  {
+    "faultName": "ccsmLmagentCcsmServicesNotDeployed",
+    "createAlarm": true,
+    "defaultDescription": "Mandatory service not deployed for licensed functionality",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993097,
+    "category": "OperationalViolation",
+    "probableCause": 100506,
+    "specificProblem": "Mandatory service not deployed for licensed functionality"
+  },
+  {
+    "faultName": "ccsmPvcUsedRatioExceeded",
+    "createAlarm": true,
+    "defaultDescription": "CCSM Persistent Storage Disk Usage Exceed Threshold",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993092,
+    "category": "ProcessingErrorAlarm",
+    "probableCause": 151,
+    "specificProblem": "CCSM Persistent Storage Disk Usage Threshold Exceeded"
+  },
+  {
+    "faultName": "ccsmScheduledBackupFails",
+    "createAlarm": true,
+    "defaultDescription": "CCSM Scheduled Backup Fails",
+    "defaultExpiration": 0,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993098,
+    "category": "ProcessingErrorAlarm",
+    "probableCause": 163,
+    "specificProblem": "CCSM Scheduled Backup Fails"
+  },
+  {
+    "faultName": "ccsmRemoteWriteServerUnavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCSM Remote Write Server is Unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 11993102,
+    "category": "CommunicationsAlarm",
+    "probableCause": 14,
+    "specificProblem": "CCSM Remote Write Server is Unavailable"
+  }
+]

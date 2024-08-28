@@ -1,0 +1,38 @@
+[
+    {
+        "code": 9243136,
+        "createAlarm": true,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "faultName": "seeLhConnectionFailure",
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "defaultDescription": "APIGM eric-see-consentmgmt failed to connect LH",
+        "defaultExpiration": 600,
+        "specificProblem": "APIGM eric-see-consentmgmt Failed to Connect to LH"
+    },
+    {
+        "code": 9243137,
+        "createAlarm": true,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "faultName": "seeDbConnectionFailure",
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "defaultDescription": "APIGM eric-see-consentmgmt failed to connect DB",
+        "defaultExpiration": 600,
+        "specificProblem": "APIGM eric-see-consentmgmt Failed to Connect DB"
+    },
+    {
+        "code": 9243138,
+        "createAlarm": true,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "faultName": "seeConsentMgmtServiceUnavailable",
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "defaultDescription": "APIGM eric-see-consentmgmt service is unavailable",
+        "defaultExpiration": 600,
+        "specificProblem": "APIGM eric-see-consentmgmt Service Unavailable"
+    }
+]

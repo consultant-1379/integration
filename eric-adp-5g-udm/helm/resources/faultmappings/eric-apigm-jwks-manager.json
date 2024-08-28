@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "smsfDBConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-jwks-manager failed to connect to DB",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-jwks-manager Failed to Connect to DB",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 9242368,
+    "probableCause": 22
+  }
+]

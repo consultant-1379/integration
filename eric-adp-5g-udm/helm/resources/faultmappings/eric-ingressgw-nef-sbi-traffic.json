@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "ccesSbiIngressGatewayServiceUnavailable",
+    "vendor": 193,
+    "code": 12058822,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 158,
+    "specificProblem": "CCES eric-ingressgw-nef-sbi-traffic Service Unavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCES eric-ingressgw-nef-sbi-traffic service is unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  }
+]

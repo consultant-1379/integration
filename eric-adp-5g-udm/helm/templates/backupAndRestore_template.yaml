@@ -1,0 +1,14 @@
+{{ if and (index .Values "global" "documentDatabasePG" "operator" "enabled") (index .Values "global" "backupAndRestoreTemplate" "enabled") }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eric-adp-5g-udm-backup-types-cfg
+  namespace: {{ .Release.Namespace }}
+  labels:
+    ericsson.com/backup-types-cfg: br-types
+data:
+  backup-types-cfg: |
+    version: 1.0.0
+    backupTypes:
+{{ toYaml .Values.global.backupTypes | indent 6 }}      
+{{- end }}

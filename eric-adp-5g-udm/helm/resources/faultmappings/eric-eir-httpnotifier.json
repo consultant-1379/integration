@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "eirHttpnotifierConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "EIR Fail to Connect to HTTP Notification Server",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 12910596,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "EIR Fail to Connect to HTTP Notification Server"
+    }
+]

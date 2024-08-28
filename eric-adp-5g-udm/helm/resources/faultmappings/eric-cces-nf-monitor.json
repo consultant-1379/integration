@@ -1,0 +1,50 @@
+[
+ {
+    "faultName": "ccesSessionDBReplicationFailed",
+    "createAlarm": true,
+    "defaultDescription": "CCES Session Database replication failed from remote site",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES Session Database Replication Failed from Remote Site",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 12058809,
+    "probableCause": 22
+  },
+  {
+    "faultName": "ccesNfMonitorServiceUnavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCES eric-cces-nf-monitor service is unavailable",
+    "defaultExpiration": 600,
+    "specificProblem": "CCES eric-cces-nf-monitor Service Unavailable",
+    "defaultSeverity": "Critical",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 12059136,
+    "probableCause": 158
+  },
+  {
+    "faultName": "ccesKubernetesApiServerConnectionFailure",
+    "vendor": 193,
+    "code": 12059137,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "CCES eric-cces-nf-monitor Failed to Connect to K8S API Server",
+    "createAlarm": true,
+    "defaultDescription": "CCES eric-cces-nf-monitor failed to connect to Kubernetes API Server",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  },
+  {
+    "faultName": "ccesDBSchemaDisagreement",
+    "vendor": 193,
+    "code": 12058801,
+    "category": "ProcessingErrorAlarm",
+    "probableCause": 160,
+    "specificProblem": "CCES WCDB schema version disagreement happened",
+    "createAlarm": true,
+    "defaultDescription": "CCES WCDB schema version disagreement happened",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Critical"
+  }
+]

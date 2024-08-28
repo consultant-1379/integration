@@ -1,0 +1,14 @@
+[
+    {
+        "faultName": "ccsmSctpPathUnavailable",
+        "createAlarm": true,
+        "defaultDescription": "One SCTP Multihoming path of a SCTP MH association is unavailable",
+        "defaultExpiration": 0,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 11993100,
+        "category": "CommunicationsAlarm",
+        "specificProblem": "CCSM SCTP Path Unavailable",
+        "probableCause": 22
+    }
+]

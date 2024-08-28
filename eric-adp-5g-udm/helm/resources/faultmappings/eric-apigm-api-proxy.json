@@ -1,0 +1,74 @@
+[
+  {
+    "faultName": "apiProxyCommonEntityServiceConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-api-proxy failed to connect to CES",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-proxy Failed to Connect to CES",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 9240583,
+    "probableCause": 22
+  },
+  {
+    "faultName": "apiProxyLmConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-api-proxy failed to connect to LM",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-proxy Failed to Connect to LM",
+    "defaultSeverity": "Major",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 9240832,
+    "probableCause": 22
+  },
+  {
+    "faultName": "apiProxyOverloading",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-api-proxy is overloaded",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-proxy Overloaded",
+    "defaultSeverity": "Major",
+    "category": "QualityOfServiceAlarm",
+    "vendor": 193,
+    "code": 9240833,
+    "probableCause": 207
+  },
+  {
+    "faultName": "apiProxyThreatOrVulnerabilityAttack",
+    "createAlarm": true,
+    "defaultDescription": "APIGM eric-apigm-api-proxy attacks detected",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-proxy Attacks Detected",
+    "defaultSeverity": "Major",
+    "category": "SecurityServiceOrMechanismViolation",
+    "vendor": 193,
+    "code": 9240834,
+    "probableCause": 1614
+  },
+  {
+    "faultName": "apiProxyBackendConnectionFailure",
+    "createAlarm": true,
+    "defaultDescription": "eric-apigm-api-proxy failed to connect to AF FQDN whose IP addresses are unreachable: <ips>",
+    "defaultExpiration": 600,
+    "specificProblem": "APIGM eric-apigm-api-proxy Failed to Connect to Backend",
+    "defaultSeverity": "Minor",
+    "category": "CommunicationsAlarm",
+    "vendor": 193,
+    "code": 9240836,
+    "probableCause": 22
+  },
+  {
+    "faultName":  "seeApiProxyServiceUnavailable",
+    "createAlarm":  true,
+    "defaultDescription":  "SEE eric-apigm-api-proxy service is unavailable",
+    "defaultExpiration":  600,
+    "specificProblem":  "SEE eric-apigm-api-proxy Service Unavailable",
+    "defaultSeverity":  "Major",
+    "category":  "QualityOfServiceAlarm",
+    "vendor":  193,
+    "code":  9243135,
+    "probableCause":  158
+  }
+]

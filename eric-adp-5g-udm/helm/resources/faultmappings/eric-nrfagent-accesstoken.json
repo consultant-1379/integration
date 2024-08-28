@@ -1,0 +1,14 @@
+[
+  {
+     "faultName": "nfAccesstokenAgentNrfConnectionFailure",
+     "createAlarm": true,
+     "defaultDescription": "NRFAgent eric-nrfagent-accesstoken Failed to Connect to NRF",
+     "defaultExpiration": 600,
+     "defaultSeverity": "Major",
+     "vendor": 193,
+     "code": 8060935,
+     "specificProblem": "NRFAgent eric-nrfagent-accesstoken Failed to Connect to NRF",
+     "probableCause": 22,
+     "category": "CommunicationsAlarm"
+  }
+]

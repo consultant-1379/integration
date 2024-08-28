@@ -1,0 +1,50 @@
+[
+    {
+        "faultName": "ccsmMapServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "CCSM MAP Service Overloaded",
+        "defaultExpiration": 0,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993093,
+        "category": "QualityOfServiceAlarm",
+        "specificProblem": "CCSM MAP Service Overloaded",
+        "probableCause": 207
+    },
+    {
+        "faultName": "ccsmMapSs7ConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "CCSM MAP Service Fail To Connect To SS7",
+        "defaultExpiration": 0,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993094,
+        "category": "CommunicationsAlarm",
+        "specificProblem": "CCSM MAP Service Fail To Connect To SS7",
+        "probableCause": 100505
+    },
+    {
+        "faultName": "ccsmMapRemoteSs7PeerUnavailable",
+        "createAlarm": true,
+        "defaultDescription": "SS7 Peer Unreachable From CCSM MAP Service",
+        "defaultExpiration": 0,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993096,
+        "category": "CommunicationsAlarm",
+        "specificProblem": "SS7 Peer Unreachable From CCSM MAP Service",
+        "probableCause": 100505
+    },
+    {
+        "faultName": "ccsmMapGtAddressNotConfigured",
+        "createAlarm": true,
+        "defaultDescription": "CCSM MAP GT Address is not configured",
+        "defaultExpiration": 0,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 11993099,
+        "category": "OperationalViolation",
+        "specificProblem": "Outgoing MAP operations cannot be processed because CCSM MAP GT Address is not configured",
+        "probableCause": 100506
+    }
+]

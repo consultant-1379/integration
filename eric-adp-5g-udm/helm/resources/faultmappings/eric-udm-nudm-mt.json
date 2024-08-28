@@ -1,0 +1,26 @@
+[
+    {
+        "faultName": "udmMtUdrConnectionFailure",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-mt Fail to Connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Minor",
+        "vendor": 193,
+        "code": 7798824,
+        "category": "CommunicationsAlarm",
+        "probableCause": 100505,
+        "specificProblem": "UDM nudm-mt Fail to Connect to UDR"
+    },
+    {
+        "faultName": "udmMtServiceOverloaded",
+        "createAlarm": true,
+        "defaultDescription": "UDM nudm-mt Service Overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major",
+        "vendor": 193,
+        "code": 7798825,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "UDM nudm-mt Service Overloaded"
+    }
+]

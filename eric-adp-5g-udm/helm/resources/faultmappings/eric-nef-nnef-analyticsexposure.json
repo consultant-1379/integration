@@ -1,0 +1,62 @@
+[
+  {
+    "faultName": "nefLhConnectionFailure",
+    "vendor": 193,
+    "code": 8590848,
+    "category": "CommunicationsAlarm",
+    "probableCause": 22,
+    "specificProblem": "NEF eric-nef-nnef-analyticsexposure Failed to Connect to LH",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-analyticsexposure failed to connect to LH",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  },
+  {
+  "faultName": "nefNwdafConnectionFailure",
+  "vendor": 193,
+  "code": 8590849,
+  "category": "CommunicationsAlarm",
+  "probableCause": 22,
+  "specificProblem": "NEF eric-nef-nnef-analyticsexposure Failed to Connect to NWDAF",
+  "createAlarm": true,
+  "defaultDescription": "NEF eric-nef-nnef-analyticsexposure failed to connect to NWDAF",
+  "defaultExpiration": 600,
+  "defaultSeverity": "Critical"
+  },
+  {
+  "faultName": "nefBadNwdafResponse",
+  "vendor": 193,
+  "code": 8590850,
+  "category": "ProcessingErrorAlarm",
+  "probableCause": 158,
+  "specificProblem": "NEF eric-nef-nnef-analyticsexposure Received Bad NWDAF Response",
+  "createAlarm": true,
+  "defaultDescription": "NEF eric-nef-nnef-analyticsexposure received bad NWDAF response",
+  "defaultExpiration": 600,
+  "defaultSeverity": "Minor"
+  },
+  {
+    "faultName": "nefAnalyticsExposureServiceUnavailable",
+    "vendor": 193,
+    "code": 8590851,
+    "category": "QualityOfServiceAlarm",
+    "probableCause": 158,
+    "specificProblem": "NEF eric-nef-nnef-analyticsexposure Service Unavailable",
+    "createAlarm": true,
+    "defaultDescription": "NEF eric-nef-nnef-analyticsexposure service is unavailable",
+    "defaultExpiration": 600,
+    "defaultSeverity": "Major"
+  },
+  {
+  "faultName": "nefAnalyticsExposureServiceOverload",
+  "vendor": 193,
+  "code": 8590852,
+  "category": "QualityOfServiceAlarm",
+  "probableCause": 158,
+  "specificProblem": "NEF eric-nef-nnef-analyticsexposure Overloaded",
+  "createAlarm": true,
+  "defaultDescription": "NEF eric-nef-nnef-analyticsexposure Overloaded",
+  "defaultExpiration": 600,
+  "defaultSeverity": "Major"
+  }
+]

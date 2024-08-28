@@ -1,0 +1,111 @@
+[
+    {
+        "faultName": "nefBsfConnectionFailure",
+        "vendor": 193,
+        "code": 8585217,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to BSF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to BSF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefPcfConnectionFailure",
+        "vendor": 193,
+        "code": 8585218,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to PCF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to PCF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefUdrConnectionFailure",
+        "vendor": 193,
+        "code": 8585219,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to UDR",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to UDR",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefUdmConnectionFailure",
+        "vendor": 193,
+        "code": 8585222,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to UDM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to UDM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8585223,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLmConnectionFailure",
+        "vendor": 193,
+        "code": 8585224,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to LM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to LM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+      "faultName": "nefTrafficInfluenceServiceOverload",
+      "vendor": 193,
+      "code": 8585225,
+      "category": "QualityOfServiceAlarm",
+      "probableCause": 207,
+      "specificProblem": "NEF eric-nef-nnef-trafficinfluence Overloaded",
+      "createAlarm": true,
+      "defaultDescription": "NEF eric-nef-nnef-trafficinfluence is overloaded",
+      "defaultExpiration": 600,
+      "defaultSeverity": "Major"
+    },
+    {
+      "faultName": "nefTrafficInfluenceServiceUnavailable",
+      "vendor": 193,
+      "code": 8585226,
+      "category": "QualityOfServiceAlarm",
+      "probableCause": 158,
+      "specificProblem": "NEF eric-nef-nnef-trafficinfluence Service Unavailable",
+      "createAlarm": true,
+      "defaultDescription": "NEF eric-nef-nnef-trafficinfluence service is unavailable",
+      "defaultExpiration": 600,
+      "defaultSeverity": "Major"
+    },
+    {
+      "faultName": "nefScpConnectionFailure",
+      "vendor": 193,
+      "code": 8585227,
+      "category": "CommunicationsAlarm",
+      "probableCause": 22,
+      "specificProblem": "NEF eric-nef-nnef-trafficinfluence Failed to Connect to SCP",
+      "createAlarm": true,
+      "defaultDescription": "NEF eric-nef-nnef-trafficinfluence failed to connect to SCP",
+      "defaultExpiration": 600,
+      "defaultSeverity": "Critical"
+    }
+]
+

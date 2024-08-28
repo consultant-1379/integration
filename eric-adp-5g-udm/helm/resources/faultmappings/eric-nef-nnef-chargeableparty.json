@@ -1,0 +1,86 @@
+[
+    {
+        "faultName": "nefPcfConnectionFailure",
+        "vendor": 193,
+        "code": 8585728,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Failed to Connect to PCF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty failed to connect to PCF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefBsfConnectionFailure",
+        "vendor": 193,
+        "code": 8585729,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Failed to Connect to BSF",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty failed to connect to BSF",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    },
+    {
+        "faultName": "nefDbConnectionFailure",
+        "vendor": 193,
+        "code": 8585730,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Failed to Connect to DB",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty failed to connect to DB",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefLmConnectionFailure",
+        "vendor": 193,
+        "code": 8585731,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Failed to Connect to LM",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty failed to connect to LM",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefCpServiceOverload",
+        "vendor": 193,
+        "code": 8585732,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 207,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Overloaded",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty is overloaded",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    { 
+        "faultName": "nefCpServiceUnavailable",
+        "vendor": 193,
+        "code": 8585733,
+        "category": "QualityOfServiceAlarm",
+        "probableCause": 158,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Service Unavailable",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty service is unavailable",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Major"
+    },
+    {
+        "faultName": "nefScpConnectionFailure",
+        "vendor": 193,
+        "code": 8585734,
+        "category": "CommunicationsAlarm",
+        "probableCause": 22,
+        "specificProblem": "NEF eric-nef-nnef-chargeableparty Failed to Connect to SCP",
+        "createAlarm": true,
+        "defaultDescription": "NEF eric-nef-nnef-chargeableparty failed to connect to SCP",
+        "defaultExpiration": 600,
+        "defaultSeverity": "Critical"
+    }
+]

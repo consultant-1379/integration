@@ -1,0 +1,14 @@
+[
+ {
+ "faultName": "ccdmLogDatabaseDiskUsage",
+ "vendor": 193,
+ "code": 12189697,
+ "defaultSeverity": "Major",
+ "defaultExpiration": 3600,
+ "probableCause": 151,
+ "category": "ProcessingErrorAlarm",
+ "createAlarm": true,
+ "specificProblem":"CCDM Log Entries Database Disk Usage High",
+ "defaultDescription": "Log Entries Database disk usage has exceeded the configured threshold."
+ }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "faultName": "ngudServiceOverloaded",
+    "vendor": 193,
+    "code": 7733265,
+    "defaultSeverity": "Major",
+    "defaultExpiration": 3600,
+    "probableCause": 207,
+    "category": "QualityOfServiceAlarm",
+    "createAlarm": true,
+    "specificProblem":"UDR eric-udr-ngud-dr Service Overloaded",
+    "defaultDescription": "Overload detected for Ngud interface."
+  }
+]

@@ -1,0 +1,87 @@
+@Library("PipelineGlobalLibrary") _
+import com.ericsson.ci.mason.Mason2
+
+def _project = "5gcicd/integration"
+def _unit = "adp"
+def _event = ""
+def _credentials = "userpwd-adp"
+def _branch = "master"
+def _refspec = ""
+def _patchset_revision=""
+def _cloud = "kubernetes"
+def _VERSION_STRATEGY = "PATCH"
+def repoInternalHelmUrl = ""
+def repoDropHelmUrl = ""
+def repoReleaseHelmUrl = ""
+def _CHART_NAME = ""
+def _CHART_VERSION = ""
+def _CHART_REPO = ""
+def _CHART_PATH = "eric-adp-5g-udm/helm"
+def _ALWAYS_RELEASE = "True"
+
+if (System.getenv("JENKINS_HOME")) { // Jenkins execution
+    _branch = params.GERRIT_BRANCH?: 'master'
+    _refspec = params.GERRIT_REFSPEC?: ''
+    _patchset_revision = params.JENKINS_GERRIT_BRANCH ?: 'master'
+    _event = 'comment-added'
+    _cloud = params.CLOUD?: _cloud
+    _CHART_NAME = params.CHART_NAME
+    _CHART_VERSION = params.CHART_VERSION
+    _CHART_REPO = params.CHART_REPO
+    _ALWAYS_RELEASE = params.ALWAYS_RELEASE?: 'True'
+    _VERSION_STRATEGY = params.VERSION_STRATEGY?: 'PATCH'
+    repoInternalHelmUrl = common.getArmHelmRepo('integrationtest', 'internal')[1]
+    repoDropHelmUrl = common.getArmHelmRepo('integrationtest', 'drop')[1]
+    repoReleaseHelmUrl = common.getArmHelmRepo('integrationtest', 'release')[1]
+}
+
+def result = Mason2.ciPipeline(this) {
+    additionalData("product", 'UNIV')
+    additionalData("cl_pipeline", 'CLe0')
+    additionalData("owner_name": 'UNIV')
+    additionalData("owner_email": 'PDLUDM5GIN@pdl.internal.ericsson.com')
+    additionalData("artifact_name", 'adp-common-chart')
+    cloud(_cloud)
+    parallel(false)
+    unit(_unit)
+    checkout  {
+        gerrit('checkout') {
+            dir('project')
+            project(_project)
+            credentials(_credentials)
+            branch(_patchset_revision)
+            refspec(_refspec)
+            url('https://gerrit-gamma-read.seli.gic.ericsson.se/a')
+        }
+    }
+    integration{
+        publish ("ADP-Common-publish"){
+            dir('project')
+            gerritCredential(_credentials)
+            gitBranch(_branch)
+            gitTag('auto')
+            gerritEvent(_event)
+            helmCredential(_credentials)
+            configFile('helm_credentials_adp')
+            chartName(_CHART_NAME)
+            chartRepo(_CHART_REPO)
+            chartVersion(_CHART_VERSION)
+            versionStrategyManual(_VERSION_STRATEGY)
+            automaticRelease(_ALWAYS_RELEASE)
+            helmVersion('3')
+            chartPath(_CHART_PATH)
+            helmInternalRepo("https://arm.lmera.ericsson.se/artifactory/proj-5g-udm-release-helm")
+            helmDropRepo(repoInternalHelmUrl)
+            helmReleasedRepo("https://arm.lmera.ericsson.se/artifactory/proj-5g-udm-release-helm")
+            credentials(_credentials)
+            updatePublishedChartsFile(false)
+        }
+    }
+    jenkins {
+        dsl("archive-artifacts"){
+            cmd {
+                archiveArtifacts(allowEmptyArchive: true, artifacts: 'artifact.properties', onlyIfSuccessful: true)
+            }
+        }
+    }
+}

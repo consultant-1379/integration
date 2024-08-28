@@ -1,0 +1,12 @@
+{{ if or (index .Values "tags" "eric-fh-alarm-handler") (index .Values "tags" "eric-adp-common") }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ default (index .Values "eric-fh-alarm-handler" "alarmhandler" "configmap" "faultmappings") }}
+  labels:
+{{- include "eric-adp-5g-udm.labels" . | indent 4 }}
+  annotations:
+{{- include "eric-adp-5g-udm.product-info" . | indent 4 }}
+data:
+{{ tpl (.Files.Glob "resources/faultmappings/*").AsConfig . | indent 4 }} 
+{{- end }}

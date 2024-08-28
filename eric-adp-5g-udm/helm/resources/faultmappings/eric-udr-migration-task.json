@@ -1,0 +1,14 @@
+[
+  { 
+    "faultName": "migrationTaskConnectionFailed",
+    "vendor": 193,
+    "code": 7733266,
+	"defaultSeverity": "Major",
+	"defaultExpiration": 2419200,
+	"probableCause": 22,
+	"category": "CommunicationsAlarm",
+	"specificProblem": "UDR eric-udr-migration-task Connection Failed",
+	"createAlarm": true,
+	"defaultDescription": "Connection failed. Endpoint unreachable."
+  }
+] 

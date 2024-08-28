@@ -1,0 +1,38 @@
+[
+  {
+    "faultName": "ccdmPvcUsedRatioExceeded",
+    "vendor": 193,
+    "code": 12189698,
+    "defaultExpiration": 600,
+    "probableCause": 151,
+    "category": "ProcessingErrorAlarm",
+    "createAlarm": true,
+    "defaultSeverity": "Major",
+    "specificProblem":"CCDM Persistent Storage Disk Usage Threshold Exceeded",
+    "defaultDescription": "CCDM Persistent Storage Disk Usage Threshold Exceeded"
+  },
+  {
+    "faultName": "ccdmScheduledBackupFailed",
+    "vendor": 193,
+    "code": 12189699,
+    "defaultExpiration": 3600,
+    "probableCause": 1024,
+    "category": "ProcessingErrorAlarm",
+    "createAlarm": true,
+    "defaultSeverity": "Major",
+    "specificProblem": "CCDM Scheduled Backup Action Failed",
+    "defaultDescription": "Scheduled Backup Action Failed."
+  },
+  {
+    "faultName": "ccdmRemoteWriteServerUnavailable",
+    "createAlarm": true,
+    "defaultDescription": "CCDM Remote Write Server is Unavailable",
+    "defaultExpiration": 3600,
+    "defaultSeverity": "Major",
+    "vendor": 193,
+    "code": 12189700,
+    "category": "CommunicationsAlarm",
+    "probableCause": 14,
+    "specificProblem": "CCDM Remote Write Server is Unavailable"
+  }
+]
